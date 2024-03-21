@@ -1,0 +1,67 @@
+@function icon-img($icon-name, $icon-color) {
+  $icon-list: (
+    chevron-left:
+      "%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none'%3E%3Cpath stroke='#{$icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='m16.021 20.348-7.71-7.71 7.71-7.71'/%3E%3C/svg%3E",
+    cat:
+      "%3Csvg xmlns='http://www.w3.org/2000/svg' width='42' height='27' fill='none'%3E%3Cpath fill='#{$icon-color}' d='M32.129 0a14.12 14.12 0 0 0-2.364.18c-.223.036-.43.109-.603.213a1.076 1.076 0 0 0-.39.385.717.717 0 0 0-.09.47c.026.158.107.31.235.443.003.003.007.006.007.01.328.35.926.52 1.51.43a9.297 9.297 0 0 1 1.595-.13c4.045 0 7.32 2.38 7.107 5.25-.089 1.199-.789 2.335-1.972 3.2l.057.076c-.865-.787-1.975-1.424-3.246-1.861A12.578 12.578 0 0 0 29.893 8c-1.396 0-2.792.22-4.045.65l-6.794 2.32c-.584.2-4.433.9-4.433.45v-2.33c0-1.25-.67-2.39-1.766-3.26l-4.708-4.51c-.356-.28-1.026-.11-1.026.27v2.71c-2.663.43-4.757 2.32-5.298 4.27-.071.25-.385.43-.74.43-.288 0-.563.08-.766.223C.114 9.366 0 9.56 0 9.76v.22c0 2.22 2.564 4.02 5.726 4.02v1.59c0 1.095.58 2.151 1.627 2.963 1.048.811 2.488 1.32 4.041 1.427v6.649c0 .2.242.37.541.37h3.205c.299 0 .541-.17.541-.38v-5.879l1.994 5.879c.085.22.37.38.698.38h3.034c.341 0 .598-.23.512-.45L19.702 20h5.717L23.2 26.55c-.085.22.171.45.513.45h3.034c.327 0 .612-.16.697-.38l1.667-4.91 1.353.95c.299.21.384.52.213.79l-1.851 3.03c-.171.24.085.52.47.52h3.105c.213 0 .413-.09.484-.23l3.59-5.89c.37-.58 1.614-1.84 1.614-1.84l1.06-4.54c0-.783-.197-1.534-.56-2.23 1.09-.668 1.959-1.494 2.547-2.421.589-.927.883-1.934.862-2.949-.071-3.78-4.486-6.86-9.87-6.9ZM5.43 8.748c0-.359.413-.637.907-.637.511 0 .907.29.907.637v.95c-.002.169-.098.33-.268.45-.17.118-.399.186-.64.187-.118 0-.236-.016-.347-.048a.994.994 0 0 1-.294-.138.674.674 0 0 1-.197-.207.475.475 0 0 1-.068-.244v-.95Z'/%3E%3C/svg%3E",
+  );
+  $icon: map-get($icon-list, $icon-name);
+  @return url("data:image/svg+xml;charset=utf8,#{$icon}");
+}
+
+@mixin set-icon($icon-name, $icon-size, $icon-color, $disp: block) {
+  display: $disp;
+  width: $icon-size;
+  height: $icon-size;
+  background: icon-img($icon-name, $icon-color) no-repeat center / 100% auto;
+}
+
+@mixin ico-chevron(
+  $icon-color,
+  $direction: left,
+  $icon-width: 2,
+  $linecap: "round"
+) {
+  $transform: rotate(0deg);
+
+  @if $direction == "up" {
+    $transform: rotate(90deg);
+  }
+  @if $direction == "down" {
+    $transform: rotate(-90deg);
+  }
+  @if $direction == "right" {
+    $transform: scaleX(-1);
+  }
+
+  background: url("data:image/svg+xml;charset=utf8, %3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none'%3E%3Cpath stroke='#{$icon-color}' stroke-linecap='#{$linecap}' stroke-linejoin='#{$linecap}' stroke-miterlimit='10' stroke-width='#{$icon-width}' d='m16.021 20.348-7.71-7.71 7.71-7.71'/%3E%3C/svg%3E")
+    no-repeat center;
+  background-size: 20px auto;
+  transform: $transform;
+}
+
+// SVG 용 컬러 변수
+
+$svg-pink-base: "%23F3F3E9";
+$svg-pink-primary: "%23F4CED3";
+$svg-pink-secondary: "%23F0B5BE";
+$svg-pink-tertiary: "%23eee";
+$svg-pink-point: "%23E33529";
+
+$svg-brown-base: "%23F3F3F3";
+$svg-brown-primary: "%23693413";
+$svg-brown-secondary: "%23F7E7DA";
+$svg-brown-tertiary: "%23eee";
+$svg-brown-point: "%23693413";
+
+$svg-blue-base: "%23F6F6ED";
+$svg-blue-primary: "%23BDDEF8";
+$svg-blue-secondary: "%23AFD8FB";
+$svg-blue-tertiary: "%235B93B0";
+$svg-blue-point: "%232B6786";
+
+
+.ico-chevron {
+  background: icon-img("chevron", $svg-pink-point) no-repeat center / auto
+    100%;
+}
