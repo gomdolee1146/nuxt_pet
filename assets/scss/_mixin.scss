@@ -76,6 +76,21 @@ $shadow-color3:                    rgba(24,39,75,0.16);
     flex-wrap: wrap;
 }
 
+// 정렬하기
+@mixin position-center(){
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin position-centerX(){
+    left: 50%;
+    transform: translateX(-50%);
+}
+@mixin position-centerY(){
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 // txt ( ... ) 처리하기
 @mixin ellipsis($line:1){
     @if $line==1 {

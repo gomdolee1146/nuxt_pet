@@ -15,7 +15,7 @@
       </div>
     </div>
     <div class="header__right">
-      <button class="header__btn-book">예약하기</button>
+      <button class="header__btn-book">BOOK NOW</button>
     </div>
   </header>
 </template>
