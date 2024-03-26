@@ -1,5 +1,6 @@
 @function icon-img($icon-name, $icon-color) {
   $icon-list: (
+    arrow: "%3Csvg xmlns='http://www.w3.org/2000/svg' width='256' height='256' fill='none'%3E%3Cpath fill='#{$icon-color}' d='M205.66 117.66a7.99 7.99 0 0 1-5.66 2.346 7.992 7.992 0 0 1-5.66-2.346L136 59.31V216a7.997 7.997 0 0 1-8 8 8 8 0 0 1-8-8V59.31l-58.34 58.35a8.005 8.005 0 0 1-11.32-11.32l72-72a8 8 0 0 1 11.32 0l72 72a8 8 0 0 1 0 11.32Z'/%3E%3C/svg%3E",
     chevron-left:
       "%3Csvg xmlns='http://www.w3.org/2000/svg' width='25' height='25' fill='none'%3E%3Cpath stroke='#{$icon-color}' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' stroke-width='2' d='m16.021 20.348-7.71-7.71 7.71-7.71'/%3E%3C/svg%3E",
     cat:
@@ -64,4 +65,15 @@ $svg-blue-point: "%232B6786";
 .ico-chevron {
   background: icon-img("chevron", $svg-pink-point) no-repeat center / auto
     100%;
+}
+
+.themePink-theme {
+  .ico__arrown-down {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: icon-img('arrow', $svg-pink-point);
+    cursor: pointer;
+    transform: scaleY(-1);
+  }
 }

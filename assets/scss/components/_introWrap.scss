@@ -1,0 +1,11 @@
+@import "@/assets/scss/style.scss";
+
+.intro {
+  @include flex-box(center, center);
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: $secondary;
+  color: $point;
+  z-index: 2000;
+}

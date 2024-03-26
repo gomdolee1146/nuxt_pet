@@ -1,24 +1,82 @@
-:root {
-}
 $header-height: 70px;
 $nav-width: 260px;
 
-$pink-base: #F3F3E9;
-$pink-primary: #F4CED3;
-$pink-secondary: #F0B5BE;
+$pink-base: #f3f3e9;
+$pink-primary: #f4ced3;
+$pink-secondary: #f0b5be;
 $pink-tertiary: #eee;
-$pink-point: #E33529;
+$pink-point: #e33529;
 
-
-$brown-base: #F3F3F3;
+$brown-base: #f3f3f3;
 $brown-primary: #693413;
-$brown-secondary: #F7E7DA;
+$brown-secondary: #f7e7da;
 $brown-tertiary: #eee;
 $brown-point: #693413;
 
-$blue-base: #F6F6ED;
-$blue-primary: #BDDEF8;
-$blue-secondary: #AFD8FB;
-$blue-tertiary: #5B93B0;
-$blue-point: #2B6786;
+$blue-base: #f6f6ed;
+$blue-primary: #bddef8;
+$blue-secondary: #afd8fb;
+$blue-tertiary: #5b93b0;
+$blue-point: #2b6786;
 
+:root {
+}
+
+$base: var(--base-color, #f3f3e9);
+$primary: var(--primary-color, #f4ced3);
+$secondary: var(--secondary-color, #f0b5be);
+$tertiary: var(--tertiary-color, #fff);
+$point: var(--point-color, #e33529);
+
+$colorList: (
+  "themePink": (
+    "base": #f3f3e9,
+    "primary": #f4ced3,
+    "secondary": #f0b5be,
+    "tertiary": #fff,
+    "point": #e33529,
+  ),
+  "themeBlue": (
+    "base": #f6f6ed,
+    "primary": #bddef8,
+    "secondary": #afd8fb,
+    "tertiary": #5b93b0,
+    "point": #2b6786,
+  ),
+  "themeBrown": (
+    "base": #f3f3f3,
+    "primary": #f7e7da,
+    "secondary": #eee,
+    "tertiary": #eee,
+    "point": #693413,
+  ),
+);
+
+@function theme-color($key: "pink", $variant: "primary") {
+  $map: map-get($theme-colors, $key);
+  @return map-get($map, $variant);
+}
+
+@function setColor($map, $object, $style) {
+  @if map-has-key($map, $object) {
+    @return map-get(map-get($map, $object), $style);
+  }
+  @warn "The key ´#{$object} is not available in the map.";
+  @return null;
+}
+
+@mixin setTheme($key) {
+  --base-color: #{setColor($colorList, $key, base)};
+  --primary-color: #{setColor($colorList, $key, primary)};
+  --secondary-color: #{setColor($colorList, $key, secondary)};
+  --tertiary-color: #{setColor($colorList, $key, tertiary)};
+  --point-color: #{setColor($colorList, $key, point)};
+}
+
+$themes: (themePink, themeBlue, themeBrown);
+
+@each $theme in $themes {
+  .#{$theme}-theme {
+    @include setTheme($theme);
+  }
+}

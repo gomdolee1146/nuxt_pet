@@ -1,38 +1,48 @@
 <template>
   <header class="header">
     <div class="header__left">
-      <a class="header__logo"></a>
+      <a class="header__logo" @click="goToPage('/')"></a>
     </div>
     <div class="header__center">
       <div class="header__nav_wrap">
         <button
           class="header__nav_btn"
-          v-for="(navList, idx) in data.navHeaderList"
+          v-for="(navList, idx) in navHeaderData"
           :key="idx"
+          @click="goToPage(navList.link)"
         >
           {{ navList.txt }}
         </button>
       </div>
     </div>
     <div class="header__right">
-      <button class="header__btn-book">BOOK NOW</button>
+      <button class="header__btn-book" @click="goToPage('/booking')">
+        BOOK NOW
+      </button>
     </div>
   </header>
 </template>
 
 <script>
-import navHeaderData from "@/data/navHeader.js";
-
 export default {
-  name: 'navHeader',
+  name: "navHeader",
   components: {},
   props: {},
   data() {
-    return {
-      data: navHeaderData,
-    };
+    return {};
   },
-  methods: {},
+  methods: {
+    goToPage(page) {
+      this.$router.push({
+        path: page,
+      });
+    },
+  },
+  computed: {
+    navHeaderData() {
+      return this.$store.state.navHeader.navHeaderList;
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>

@@ -1,0 +1,45 @@
+@import "@/assets/scss/style.scss";
+
+.main {
+  &__swiper {
+    @include flex-box(center);
+    height: 90vh;
+
+    > div {
+      flex: 0 0 50%;
+      height: 100%;
+      position: relative;
+    }
+    &-l {
+      @include flex-column(space-between, flex-start);
+      padding: 80px 24px 32px;
+      background-color: $base;
+      box-sizing: border-box;
+    }
+
+    &_box {
+      h2 {
+        margin-top: 20px;
+      }
+    }
+
+    &_img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &_nav {
+      @include flex-column(center);
+      @include position-center;
+
+      gap: 8px;
+      width: 50px;
+      height: 100px;
+      position: absolute;
+      background-color: #ff4572;
+      z-index: 10;
+    }
+  }
+}

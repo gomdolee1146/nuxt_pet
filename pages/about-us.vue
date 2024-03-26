@@ -2,10 +2,6 @@
   <section class="main">
     <mainSection01 />
     <mainSection02 />
-    <div class="main03">
-      <div class="main03__title"></div>
-      <div class="main03__thumb">되게 귀여운 갱얼쥐 사진하나</div>
-    </div>
     <mainSection04 />
   </section>
 </template>
@@ -18,7 +14,7 @@ import mainSection04 from "@/components/section/main/mainSection04.vue";
 export default {
   name: "mainSection",
   components: { mainSection01, mainSection02, mainSection04 },
-  layout: "default",
+  layout: "pinkLayout",
   props: {},
   data() {
     return {};

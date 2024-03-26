@@ -1,0 +1,56 @@
+@import "@/assets/scss/style.scss";
+
+.main {
+  background-color: #fff;
+
+  &__bg {
+    height: 80vh;
+    // border-radius: 0 0 20% 20%;
+    background-color: $secondary;
+  }
+  &__title-l,
+  &__title-r {
+    position: absolute;
+    top: 12%;
+    width: max-content;
+    color: $point;
+  }
+
+  &__title-l {
+    left: 10%;
+  }
+  &__title-r {
+    right: 10%;
+  }
+
+  &__center {
+    position: absolute;
+    @include position-center;
+    width: 72vh;
+    height: 72vh;
+    border-radius: 50%;
+    background-color: $primary;
+    z-index: 1;
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      text {
+        font-size: 26px;
+        letter-spacing: -0.02em;
+        fill: $point;
+      }
+    }
+  }
+  &__thumb {
+    position: absolute;
+    @include position-center;
+    min-width: 120px;
+    width: 24vh;
+    min-height: 120px;
+    height: 24vh;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
