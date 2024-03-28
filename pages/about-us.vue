@@ -1,19 +1,19 @@
 <template>
-  <section class="main">
-    <mainSection01 />
-    <mainSection02 />
-    <mainSection04 />
+  <section class="about">
+    <aboutSection01 />
+    <aboutSection02 />
+    <aboutSection04 />
   </section>
 </template>
 
 <script>
-import mainSection01 from "@/components/section/main/mainSection01.vue";
-import mainSection02 from "@/components/section/main/mainSection02.vue";
-import mainSection04 from "@/components/section/main/mainSection04.vue";
+import aboutSection01 from "@/components/section/about/aboutSection01.vue";
+import aboutSection02 from "@/components/section/about/aboutSection02.vue";
+import aboutSection04 from "@/components/section/about/aboutSection04.vue";
 
 export default {
-  name: "mainSection",
-  components: { mainSection01, mainSection02, mainSection04 },
+  name: "aboutSection",
+  components: { aboutSection01, aboutSection02, aboutSection04 },
   layout: "pinkLayout",
   props: {},
   data() {

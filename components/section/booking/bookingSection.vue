@@ -1,10 +1,10 @@
 <template>
   <div class="booking">
-    <button class="booking__btn-back">Back</button>
+    <button class="booking__btn-back" v-if="this.step !== 1" @click="goToPrev">Back</button>
     <div class="booking__wrap" v-if="this.step === 1">
       <h4 class="booking__title">Choose your Selection</h4>
       <select class="booking__select">
-        <option>{{ "하이" }}</option>
+        <option>{{  }}</option>
       </select>
     </div>
     <div class="booking__wrap" v-if="this.step === 2">
@@ -12,7 +12,7 @@
       <input type="text" class="booking__input" v-model="bookingName" />
     </div>
     <div class="booking__wrap" v-if="this.step === 3">
-      <h4 class="booking__title">How long does a pet need to walk?</h4>
+      <h4 class="booking__title"></h4>
       <input type="text" class="booking__input" v-model="bookingTime" />
     </div>
     <div class="booking__wrap" v-if="this.step === 4">
@@ -24,7 +24,7 @@
             class="booking__check"
             v-model="bookingMeetBefore"
           />
-          <label class="booking__label">선택지가 있고</label>
+          <label class="booking__label">선택지1</label>
         </span>
       </div>
     </div>
@@ -32,7 +32,7 @@
       <h4 class="booking__title">we also need to know that...</h4>
       <div class="booking__input_wrap">
         <textarea
-          placeholder="typing about"
+          placeholder=""
           class="booking__textarea"
           v-model="bookingMoreInfo"
         ></textarea>
@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <button class="booking__btn-next">Next</button>
+    <button class="booking__btn-next" @click="goToNext">Next</button>
   </div>
 </template>
 
@@ -66,6 +66,24 @@ export default {
       bookingMail: "",
     };
   },
+  method: {
+    goToPrev(){
+      if (this.step < 1){
+        console.log('확인필요함')
+      } else {
+        this.step--;
+      }
+    },
+    goToNext(){
+      if (this.step > 6){
+        this.$router.push({
+          path: '/', // 완료 페이지 필요
+        })
+      } else {
+        this.step++;
+      }
+    }
+  }
 };
 </script>
 

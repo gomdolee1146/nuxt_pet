@@ -37,7 +37,7 @@
       padding: 4px;
       font-size: 16px;
       font-weight: 700;
-      color: $pink-point;
+      color: $point;
       box-sizing: border-box;
       overflow: hidden;
 
@@ -50,7 +50,7 @@
         width: 100%;
         height: 2px;
         border-radius: 2px;
-        background-color: $pink-point;
+        background-color: $point;
         transition: left 0.4s ease;
         will-change: left;
       }
@@ -67,10 +67,10 @@
     height: 60px;
     padding: 20px 16px 0;
     border-radius: 0 0 8px 8px;
-    background-color: $pink-point;
+    background-color: $point;
     font-size: 16px;
     font-weight: 700;
-    color: $pink-primary;
+    color: $primary;
     transition: all 0.4s ease;
     box-sizing: border-box;
     text-align: center;
@@ -89,7 +89,7 @@
       left: 0;
       top: -200%;
       border-radius: 0 0 10px 10px ;
-      background-color: $pink-point;
+      background-color: $point;
       transition: top 0.2s ease;
       will-change: top;
     }

@@ -1,11 +1,11 @@
 <template>
-   <div class="main">
-      <div class="main__bg"></div>
-      <div class="main__wrap">
-        <div class="main__title-l txt_subtitle1">THE YOUR LOVE</div>
-        <div class="main__title-r txt_subtitle1">PETS DESERVES</div>
-        <div class="main__center">
-          <div class="main__circle">
+   <div class="about">
+      <div class="about__bg"></div>
+      <div class="about__wrap">
+        <div class="about__title-l txt_subtitle1">THE YOUR LOVE</div>
+        <div class="about__title-r txt_subtitle1">PETS DESERVES</div>
+        <div class="about__center">
+          <div class="about__circle">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 500">
               <defs>
                 <path d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250" id="textcircle_top">
@@ -21,7 +21,7 @@
               </text>
             </svg>
           </div>
-          <div class="main__thumb">이미지</div>
+          <div class="about__thumb">이미지</div>
         </div>
       </div>
     </div>
@@ -29,11 +29,11 @@
 
 <script>
 export default {
-  name: 'mainSection02',
+  name: 'aboutSection02',
 }
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/components/section/main/mainCommon.scss";
-@import "@/assets/scss/components/section/main/main02.scss";
+@import "@/assets/scss/components/section/about/aboutCommon.scss";
+@import "@/assets/scss/components/section/about/about02.scss";
 </style>

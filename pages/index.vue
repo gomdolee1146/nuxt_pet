@@ -1,11 +1,13 @@
 <template>
-  <introWrap />
+  <mainSection />
 </template>
 
 <script>
-import introWrap from "@/components/introWrap.vue";
+import mainSection from "@/components/section/main/mainSection.vue";
+
 export default {
-  components: { introWrap },
   name: "IndexPage",
+  layout: "pinkLayout",
+  components: { mainSection },
 };
 </script>

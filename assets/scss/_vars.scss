@@ -1,23 +1,9 @@
 $header-height: 70px;
 $nav-width: 260px;
 
-$pink-base: #f3f3e9;
-$pink-primary: #f4ced3;
-$pink-secondary: #f0b5be;
-$pink-tertiary: #eee;
-$pink-point: #e33529;
-
 $brown-base: #f3f3f3;
 $brown-primary: #693413;
 $brown-secondary: #f7e7da;
-$brown-tertiary: #eee;
-$brown-point: #693413;
-
-$blue-base: #f6f6ed;
-$blue-primary: #bddef8;
-$blue-secondary: #afd8fb;
-$blue-tertiary: #5b93b0;
-$blue-point: #2b6786;
 
 :root {
 }
@@ -33,22 +19,15 @@ $colorList: (
     "base": #f3f3e9,
     "primary": #f4ced3,
     "secondary": #f0b5be,
-    "tertiary": #fff,
+    "tertiary": #FCFCF7,
     "point": #e33529,
   ),
   "themeBlue": (
     "base": #f6f6ed,
-    "primary": #bddef8,
-    "secondary": #afd8fb,
-    "tertiary": #5b93b0,
+    "primary": #afd8fb,
+    "secondary": #5b93b0,
+    "tertiary": #EBF1F0,
     "point": #2b6786,
-  ),
-  "themeBrown": (
-    "base": #f3f3f3,
-    "primary": #f7e7da,
-    "secondary": #eee,
-    "tertiary": #eee,
-    "point": #693413,
   ),
 );
 
@@ -73,7 +52,7 @@ $colorList: (
   --point-color: #{setColor($colorList, $key, point)};
 }
 
-$themes: (themePink, themeBlue, themeBrown);
+$themes: (themePink, themeBlue);
 
 @each $theme in $themes {
   .#{$theme}-theme {
