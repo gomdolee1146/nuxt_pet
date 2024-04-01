@@ -5,8 +5,8 @@
       <div class="about__wrap">
         <h4 class="txt_subtitle2">About us</h4>
         <div class="about__title">
-          <h1 class="txt_headline1">WHAT IS DON'T </h1>
-          <h1 class="txt_headline1">BOARD ME</h1>
+          <h1 class="txt_headline2">WHAT IS DON'T </h1>
+          <h1 class="txt_headline2">BOARD ME</h1>
         </div>
         <div class="about__arrow ico__arrow-down"></div>
       </div>

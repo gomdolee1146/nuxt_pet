@@ -3,8 +3,8 @@
     <div class="logo"></div>
     <button class="btn-close">CLOSE</button>
     <ul class="menu__list">
-      <li class="menu__lst" v-for="(navMenu, idx) in navMenuList" :key="idx">
-        <button @click="goToPage(navMenu.link)">{{ navMenu.txt }}</button>
+      <li class="menu__lst" v-for="(menu, idx) in navMenu" :key="idx">
+        <button @click="goToPage(menu.link)">{{ menu.txt }}</button>
       </li>
     </ul>
     <div class="sns__list">
@@ -29,8 +29,8 @@ export default {
     },
   },
   computed:{
-    navMenuList(){
-      this.$store.state.navHeader.navHeaderList;
+    navMenu(){
+      this.$store.state.menuList.navMenu;
     }
   }
 }

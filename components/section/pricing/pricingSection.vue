@@ -19,7 +19,7 @@ export default {
   data() {
     return {};
   },
-  mounted: {
+  computed: {
     pricingData() {
       return this.$store.state.pricingSection.pricingList;
     },

@@ -1,0 +1,74 @@
+@import "@/assets/scss/style.scss";
+
+.main {
+  width: 100%;
+  height: 100vh;
+
+  &__title {
+    width: 100%;
+    color: $point;
+    text-align: center;
+  }
+
+  &__list {
+    position: relative;
+    min-height: 80vh;
+    padding: 10vh 10vw;
+    box-sizing: border-box;
+    z-index: 5;
+
+    &-lb {
+      position: absolute;
+      bottom: 10vh;
+      left: 8vw;
+    }
+
+    &_num {
+      position: absolute;
+      top: 5vh;
+      left: 8vw;
+      color: $point;
+    }
+
+    &_thumb {
+      @include position-center;
+      position: absolute;
+      width: 50vw;
+      height: 50vw;
+      background-color: #fff;
+    }
+    &_title {
+      color: $point;
+    }
+  }
+
+  &__icons {
+    @include position-centerY;
+    position: absolute;
+    right: 0;
+  }
+  &__ico {
+    display: block;
+    position: relative;
+    width: 112px;
+    height: 112px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    background-color: $base;
+    &.on {
+      border: 2px solid $point;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__circle{
+    position: absolute;
+    top: 12vw;
+    width: 100vw;
+    height: 114vw;
+    border-radius: 50%;
+    background-color: $secondary;
+    z-index: 3;
+  }
+}

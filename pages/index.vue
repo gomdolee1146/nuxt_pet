@@ -1,13 +1,13 @@
 <template>
-  <mainSection />
+  <mainWrap />
 </template>
 
 <script>
-import mainSection from "@/components/section/main/mainSection.vue";
+import mainWrap from "@/components/section/main/mainWrap.vue";
 
 export default {
   name: "IndexPage",
   layout: "pinkLayout",
-  components: { mainSection },
+  components: { mainWrap },
 };
 </script>

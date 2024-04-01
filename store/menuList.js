@@ -1,5 +1,5 @@
 export const state = () => ({
-  navHeaderList: [
+  navMenu: [
     {
       txt: 'Pricing',
       link: '/pricing'

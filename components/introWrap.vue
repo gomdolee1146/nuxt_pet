@@ -1,6 +1,6 @@
 <template>
   <div class="intro">
-    <div class="intro__center txt_headline1">
+    <div class="intro__center txt_headline2">
       Loading <span ref="introCountNum">0</span>%...
     </div>
     <div class="intro__btm txt_headline5">

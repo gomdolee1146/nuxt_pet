@@ -1,19 +1,21 @@
 <template>
-  <footer class="footer">
+  <footer class="footer txt_subtitle1">
     <div class="footer__top">
       <div class="footer__l">
         <div class="footer__logo"></div>
-        <div class="footer__txt">san diego-carlsbad. <br />ca metropolitan area</div>
+        <div class="footer__txt">
+          <span>san diego-carlsbad, ca</span><span>metropolitan area</span>
+        </div>
       </div>
       <div class="footer__r">
         <ul class="footer__list">
-          <li class="footer__lst">
-            <button></button>
+          <li class="footer__lst" v-for="(menu, idx) in navMenu" :key="idx">
+            <button @click="goToPage(menu.link)">{{ menu.txt }}</button>
           </li>
         </ul>
         <ul class="footer__list">
-          <li class="footer__lst">
-            <button>privacy policy / terms of use / faq / instagram / tik-tok</button>
+          <li class="footer__lst" v-for="(menu, idx) in footerBtn" :key="idx">
+            <button>{{ menu }}</button>
           </li>
         </ul>
       </div>
@@ -27,7 +29,34 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "footerBox",
+  data() {
+    return {
+      footerBtn: [
+        "privacy policy",
+        "terms of use",
+        "faq",
+        "instagram",
+        "tik-tok",
+      ],
+    };
+  },
+  methods: {
+    goToPage(page) {
+      this.$router.push({
+        path: page,
+      });
+    },
+  },
+  computed: {
+    navMenu() {
+      return this.$store.state.menuList.navMenu;
+    },
+  },
+};
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+@import "@/assets/scss/components/navigation/footer.scss";
+</style>

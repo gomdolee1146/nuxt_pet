@@ -1,0 +1,79 @@
+@import "@/assets/scss/style.scss";
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 36px 60px;
+  border-top: 1px solid $point;
+  background-color: $primary;
+  color: $point;
+  box-sizing: border-box;
+
+  &__top {
+    @include flex-box(space-between, center);
+    flex: 0 0 50%;
+  }
+
+  &__btm {
+    @include flex-box(space-between, center);
+    border-top: 1px solid $point;
+    padding: 24px 0;
+    box-sizing: border-box;
+  }
+
+  &__l {
+    @include flex-box(flex-start, center);
+    gap: 4vw;
+  }
+  &__logo {
+    width: 150px;
+    height: 150px;
+    background-color: $point;
+  }
+  &__txt {
+    span {
+      display: block;
+    }
+  }
+
+  &__r {
+    @include flex-box(flex-end, center);
+    gap: 4vw;
+  }
+
+  &__list {
+    padding: 0 16px;
+  }
+  &__lst {
+    width: 200px;
+    button {
+      position: relative;
+      width: 100%;
+      padding: 12px 0;
+      color: $point;
+      text-align: right;
+      overflow: hidden;
+
+      // &::before{
+      //   content: '';
+      //   display: block;
+      //   position: absolute;
+      //   bottom: 0;
+      //   right: 100%;
+      //   width: 100%;
+      //   height: 1px;
+      //   background-color: $point;
+      //   transition: right .3s ease;
+      //   will-change: right;
+      // }
+      // &:hover::before{
+      //   right: 0;
+      // }
+    }
+  }
+  &__desc {
+    position: absolute;
+    bottom: 100px;
+    left: 100px;
+  }
+}

@@ -1,0 +1,124 @@
+@import "@/assets/scss/style.scss";
+
+.main {
+  width: 100%;
+  height: 85vh;
+  min-height: auto;
+  &__btn-book {
+    position: absolute;
+    bottom: 60px;
+    right: 4vw;
+  }
+  &__title {
+    @include position-center;
+    position: absolute;
+    width: 100%;
+    color: $point;
+    text-align: center;
+    z-index: 5;
+  }
+
+  &__bg {
+    @include flex-box(space-around, center);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    pointer-events: none;
+  }
+
+  &__num {
+    display: inline-block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    border-radius: 50%;
+    background: #fff;
+    text-align: center;
+
+    &.on {
+      background: #fff500;
+      color: $point;
+    }
+  }
+
+  &__card_wrap {
+    position: relative;
+    width: 100%;
+    z-index: 6;
+  }
+  &__card {
+    @include flex-column(flex-start, center);
+    position: absolute;
+    width: 30vw;
+    height: 30vw;
+    padding: 20px 8px 8px;
+    border-radius: 8px;
+    background-color: $base;
+    color: $brown-primary;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.15);
+
+    &:first-child,
+    &:nth-child(2) {
+      transform: rotate(-2deg) translateX(-50%);
+    }
+    &:nth-child(3) {
+      transform: rotate(-2deg) translateX(50%);
+    }
+    &:last-child {
+      transform: rotate(2deg) translateX(50%);
+    }
+
+    &_title {
+      padding-top: 10px;
+    }
+    &_num {
+      margin-top: 20px;
+    }
+    &_desc {
+      text-align: center;
+    }
+    &_thumb {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      height: 14vw;
+      margin-top: 2vw;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+  }
+
+  &__num,
+  &__card {
+    &:first-child {
+      left: 16vw;
+      top: 24vh;
+    }
+    &:nth-child(2) {
+      left: 38vw;
+      top: 10vh;
+    }
+    &:nth-child(3) {
+      right: 38vw;
+      top: 20vh;
+    }
+    &:last-child {
+      right: 16vw;
+      top: 16vh;
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    color: $point;
+    z-index: 10;
+    text-align: center;
+  }
+}

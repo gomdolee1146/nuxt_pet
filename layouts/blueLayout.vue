@@ -1,18 +1,20 @@
 <template>
-  <div class="themeBlue-theme">
-    <navHeader />
-    <nuxt />
-  </div>
+  <transition name="fade">
+    <div class="themeBlue-theme">
+      <navHeader />
+      <nuxt />
+      <footerBox />
+    </div>
+  </transition>
 </template>
 
 <script>
-import navHeader from '@/components/navigation/navHeader.vue'
-export default {
-  components: { navHeader },
+import navHeader from "@/components/navigation/navHeader.vue";
+import footerBox from "@/components/navigation/footerBox.vue";
 
-}
+export default {
+  components: { navHeader, footerBox },
+};
 </script>
 
-<style>
-
-</style>
+<style></style>

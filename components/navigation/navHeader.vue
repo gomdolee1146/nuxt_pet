@@ -7,11 +7,11 @@
       <div class="header__nav_wrap">
         <button
           class="header__nav_btn"
-          v-for="(navList, idx) in navHeaderData"
+          v-for="(menu, idx) in navMenu"
           :key="idx"
-          @click="goToPage(navList.link)"
+          @click="goToPage(menu.link)"
         >
-          {{ navList.txt }}
+          {{ menu.txt }}
         </button>
       </div>
     </div>
@@ -39,8 +39,8 @@ export default {
     },
   },
   computed: {
-    navHeaderData() {
-      return this.$store.state.navHeader.navHeaderList;
+    navMenu() {
+      return this.$store.state.menuList.navMenu;
     },
   },
 };

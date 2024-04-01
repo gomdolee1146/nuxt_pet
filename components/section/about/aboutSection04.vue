@@ -54,7 +54,7 @@ export default {
   },
   computed: {
     blogData() {
-      return this.$store.state.aboutSection.aboutSection04;
+      return this.$store.state.aboutSection.aboutService;
     },
   },
 };
