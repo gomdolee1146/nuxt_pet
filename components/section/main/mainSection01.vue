@@ -27,23 +27,23 @@
       </div>
     </div>
 
-    <div class="main__ball_wrap">
-      <div
-        class="main__ball"
-        :class="`main__ball0${idx}`"
-        v-for="idx in 6"
-        :key="idx"
-      ></div>
-    </div>
+    <bgBalls>
+      <template v-slot:otherBalls>
+        <div class="main__ball main__ball07 txt_headline4">
+          <span>About US</span>
+        </div>
+      </template>
+    </bgBalls>
   </div>
 </template>
 
 <script>
+import bgBalls from "@/components/atom/bgBalls.vue";
 import textAnimation from "@/components/atom/textAnimation.vue";
 
 export default {
   name: "mainSection01",
-  components: { textAnimation },
+  components: { bgBalls, textAnimation },
   data() {
     return {
       textContent: [

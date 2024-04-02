@@ -1,0 +1,79 @@
+@import "@/assets/scss/style.scss";
+
+.pricing {
+  @include flex-box(center, stretch);
+  gap: 20px;
+  width: 100%;
+  padding: 36px;
+  background-color: $primary;
+  box-sizing: border-box;
+
+  &__card {
+    flex: 0 0 20%;
+    width: 20%;
+    border-radius: 20px;
+
+    h4 {
+      margin-bottom: 40px;
+      min-height: 50px;
+      color: $point;
+    }
+    h2 {
+      margin-bottom: 80px;
+      color: $point;
+    }
+
+    &_box {
+      position: relative;
+      padding: 44px 24px;
+      margin-bottom: 24px;
+      border-radius: 20px;
+      background-color: $base;
+      box-sizing: border-box;
+      text-align: center;
+      aspect-ratio: 1.4;
+    }
+    &-last {
+      @include flex-column(space-between, center);
+      padding: 36px 24px;
+      background-color: $point;
+
+      h4 {
+        color: $base;
+      }
+    }
+  }
+  &__txt {
+    min-height: 36px;
+    color: $point;
+  }
+  &__btn {
+    display: inline-block;
+    width: 100%;
+    height: 56px;
+    line-height: 56px;
+    border-radius: 30px;
+    background-color: $point;
+    color: $base;
+    text-align: center;
+
+    &-go {
+      @include flex-box(center, center);
+      width: 80%;
+      border-radius: 50%;
+      background-color: $secondary;
+      aspect-ratio: 1/1;
+    }
+  }
+
+  &__badge {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px 12px;
+    border-radius: 0 12px;
+    background-color: $point;
+    color: $base;
+  }
+}

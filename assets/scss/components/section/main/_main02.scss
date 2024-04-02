@@ -6,6 +6,7 @@
 
   &__title {
     width: 100%;
+    padding-top: 2vh;
     color: $point;
     text-align: center;
   }
@@ -31,11 +32,13 @@
     }
 
     &_thumb {
-      @include position-center;
+      @include position-centerX;
+      top: 4.2vh;
       position: absolute;
-      width: 50vw;
-      height: 50vw;
-      background-color: #fff;
+      width: 36vw;
+      border-radius: 50%;
+      background-color: $primary;
+      aspect-ratio: 1/1;
     }
     &_title {
       color: $point;
@@ -45,7 +48,7 @@
   &__icons {
     @include position-centerY;
     position: absolute;
-    right: 0;
+    right: 5vw;
   }
   &__ico {
     display: block;
@@ -64,9 +67,9 @@
   }
   &__circle{
     position: absolute;
-    top: 12vw;
+    top: 22vh;
     width: 100vw;
-    height: 114vw;
+    height: 170vh;
     border-radius: 50%;
     background-color: $secondary;
     z-index: 3;

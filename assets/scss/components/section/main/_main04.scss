@@ -1,0 +1,207 @@
+@import "@/assets/scss/style.scss";
+
+.main {
+  overflow: hidden;
+
+  &__circle {
+    position: absolute;
+    width: 100%;
+    border-radius: 50%;
+    background-color: $secondary;
+    aspect-ratio: 1/1;
+  }
+  &__ball_wrap {
+    position: relative;
+    width: 100%;
+    min-height: 10vh;
+    // background: $base;
+    z-index: 2;
+  }
+  &__ball {
+    display: block;
+    position: absolute;
+    margin-top: 10vh;
+    border-radius: 50%;
+    background: linear-gradient(180deg, $base, #ececce);
+    aspect-ratio: 1/1;
+
+    &01 {
+      width: 12vw;
+      right: 10vw;
+      top: -44vh;
+      transform: rotate(100deg);
+    }
+    &02 {
+      width: 15vw;
+      left: -4vw;
+      top: -36vh;
+    }
+    &03 {
+      width: 24vw;
+      top: 0vh;
+      left: -6vw;
+      transform: rotate(10deg);
+    }
+    &04 {
+      width: 36vw;
+      left: 10vw;
+      top: -12vh;
+      transform: rotate(80deg);
+    }
+    &05 {
+      width: 30vw;
+      right: -3vw;
+      top: -6vh;
+    }
+    &06 {
+      width: 20vw;
+      right: 20vw;
+      top: 4vh;
+    }
+    &07 {
+      width: 32vw;
+      top: 4vh;
+      right: 30vw;
+    }
+  }
+
+  &__wrap {
+    @include flex-column(flex-start, center);
+    position: relative;
+    padding-top: 10vh;
+    z-index: 1;
+  }
+  &__desc {
+    span {
+      display: block;
+      color: $point;
+      text-align: center;
+    }
+  }
+  &__title {
+    margin-top: 10vh;
+    span {
+      display: block;
+      color: $point;
+      text-align: center;
+    }
+  }
+  &__swiper {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    margin-top: 12vw;
+    z-index: 2;
+
+    &_bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 0 0 80vh 80vh;
+      background: linear-gradient(to bottom, transparent 0%, $base 10%);
+      z-index: 1;
+    }
+
+    &_title {
+      position: relative;
+      width: 100%;
+      padding: 20px 0;
+      color: $point;
+      box-sizing: border-box;
+      text-align: center;
+      z-index: 5;
+    }
+    &-title {
+      position: relative;
+      padding: 4vh 0;
+      margin-top: 4vh;
+      color: $point;
+      border-top: 1px solid $point;
+      box-sizing: border-box;
+      text-align: center;
+      z-index: 10;
+
+      .swiper-container {
+        overflow: visible;
+      }
+      .g_swiper__slide {
+        position: relative;
+      }
+      .g_swiper__slide::before {
+        @include position-center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: -4vh;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: $point;
+      }
+      .swiper-slide-active::after {
+        @include position-center;
+        content: "";
+        display: block;
+        position: absolute;
+        top: -4vh;
+        width: 28px;
+        height: 28px;
+        border: 1px solid $point;
+        border-radius: 50%;
+      }
+    }
+
+    &-card {
+      display: flex;
+      align-items: center;
+      position: relative;
+      width: 100%;
+      height: 40vh;
+      padding: 20vh 16vw;
+      margin-top: 10vh;
+      box-sizing: border-box;
+      text-align: center;
+
+      .swiper-container,
+      .swiper-slide {
+        @include flex-box(center, center);
+        width: 100%;
+        color: $point;
+      }
+      .swiper-wrapper {
+        align-items: center;
+      }
+    }
+
+    &_navi-prev,
+    &_navi-next {
+      @include position-centerY;
+      position: absolute;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background-color: $point;
+      z-index: 10;
+    }
+
+    &_navi-prev {
+      left: 3vw;
+    }
+    &_navi-next {
+      right: 3vw;
+    }
+  }
+}
+
+.themeBlue-theme {
+  position: relative;
+  width: 100%;
+  margin-top: -80vh;
+  z-index: 0;
+
+  .main__bg {
+    width: 100%;
+    height: 100vh;
+    background-color: $primary;
+  }
+}

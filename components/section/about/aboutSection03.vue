@@ -10,10 +10,10 @@
 
 <script>
 export default {
-
+  name: 'aboutSection03',
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import "@/assets/scss/components/section/about/about03.scss";
 </style>

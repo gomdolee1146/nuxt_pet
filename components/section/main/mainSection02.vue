@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <div class="main__title txt_headline1">Our services</div>
-    <div class="main__arrow">
+    <div class="ico_box">
       <i class="ico__arrow-down"></i>
     </div>
     <div class="main__list">

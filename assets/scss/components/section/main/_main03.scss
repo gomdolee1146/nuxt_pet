@@ -52,8 +52,7 @@
   &__card {
     @include flex-column(flex-start, center);
     position: absolute;
-    width: 30vw;
-    height: 30vw;
+    width: 24vw;
     padding: 20px 8px 8px;
     border-radius: 8px;
     background-color: $base;
@@ -61,6 +60,7 @@
     text-align: center;
     box-sizing: border-box;
     box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.15);
+    aspect-ratio: 1.2;
 
     &:first-child,
     &:nth-child(2) {
@@ -115,7 +115,7 @@
 
   &__desc {
     position: absolute;
-    bottom: 60px;
+    bottom: 12vh;
     width: 100%;
     color: $point;
     z-index: 10;

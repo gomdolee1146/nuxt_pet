@@ -1,13 +1,13 @@
 <template>
-  <pricingSection />
+  <pricingWrap class="pricing" />
 </template>
 
 <script>
-import pricingSection from "@/components/section/pricing/pricingSection.vue";
+import pricingWrap from "@/components/section/pricing/pricingWrap.vue";
 
 export default {
   name: "pricing",
-  components: { pricingSection },
+  components: { pricingWrap },
   layout: "blueLayout",
 };
 </script>

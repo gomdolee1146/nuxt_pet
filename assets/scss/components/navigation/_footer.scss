@@ -3,9 +3,10 @@
 .footer {
   position: relative;
   width: 100%;
-  padding: 36px 60px;
+  padding: 24px 60px;
   border-top: 1px solid $point;
   background-color: $primary;
+  font-size: 14px;
   color: $point;
   box-sizing: border-box;
 
@@ -26,8 +27,8 @@
     gap: 4vw;
   }
   &__logo {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     background-color: $point;
   }
   &__txt {
@@ -49,7 +50,7 @@
     button {
       position: relative;
       width: 100%;
-      padding: 12px 0;
+      padding: 8px 0;
       color: $point;
       text-align: right;
       overflow: hidden;
@@ -76,4 +77,8 @@
     bottom: 100px;
     left: 100px;
   }
+}
+
+.pricing ~ .footer {
+  background-color: $base;
 }

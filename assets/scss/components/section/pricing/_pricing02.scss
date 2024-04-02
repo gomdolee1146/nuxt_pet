@@ -1,0 +1,100 @@
+@import "@/assets/scss/style.scss";
+
+.pricing {
+  position: relative;
+  background-color: $base;
+
+  &__bg-large {
+    @include flex-box(center, flex-end);
+    width: 104%;
+    height: 100vh;
+    margin-left: -2%;
+    border-radius: 0 0 100vh 100vh;
+    background: $primary;
+    opacity: 0.3;
+  }
+
+  &__bg {
+    @include position-centerX;
+    position: absolute;
+    top: 0;
+    width: 104%;
+    height: 80vh;
+    border-radius: 0 0 80vh 80vh;
+    background: $primary;
+  }
+
+  &__circle {
+    @include position-centerX;
+    position: absolute;
+    bottom: 0;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: $point;
+    aspect-ratio: 1/1;
+
+    text {
+      font-size: 60px;
+      fill: $base;
+    }
+  }
+  &__box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-top: 10vh;
+    color: $point;
+    z-index: 15;
+    text-align: center;
+  }
+
+  &__addition {
+    padding-bottom: 10vh;
+
+    &_list {
+      padding: 0 40px;
+      box-sizing: border-box;
+    }
+    &_lst {
+      position: relative;
+      width: 100%;
+      padding: 20px 0;
+      margin-bottom: 10px;
+      border-bottom: 2px solid $secondary;
+      box-sizing: border-box;
+
+      &:hover .pricing__addition_badge {
+        opacity: 1;
+      }
+      &:hover h4 {
+        transform: translateX(144px);
+      }
+    }
+    &_box {
+      @include flex-box(flex-start, center);
+    }
+    &_badge {
+      position: absolute;
+      height: 40px;
+      line-height: 44px;
+      padding: 0 20px;
+      border-radius: 20px;
+      background-color: $point;
+      font-size: 24px;
+      color: $base;
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    &_price {
+      @include position-centerY;
+      position: absolute;
+      right: 0;
+    }
+    span,
+    h4,
+    h6 {
+      color: $point;
+      transition: all 0.5s ease;
+    }
+  }
+}

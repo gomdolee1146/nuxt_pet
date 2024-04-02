@@ -1,0 +1,32 @@
+@import "@/assets/scss/style.scss";
+
+.pricing {
+  position: relative;
+  background-color: $primary;
+
+  &__wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10vh 10vw;
+    z-index: 10;
+    text-align: center;
+    box-sizing: border-box;
+
+    span {
+      display: block;
+    }
+    h4, 
+    div,
+    p {
+      color: $point;
+    }
+    h4 {
+      margin-bottom: 2vh;
+    }
+    p {
+      margin-top: 10vh;
+    }
+  }
+}

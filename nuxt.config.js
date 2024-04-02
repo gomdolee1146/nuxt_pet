@@ -23,6 +23,7 @@ export default {
   plugins: [
     '@/plugins/vue-awesome-swiper.js',
     '@/plugins/gsap.js',
+    '@/plugins/lodash.js',
   ],
 
   components: true,

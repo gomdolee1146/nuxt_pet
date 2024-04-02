@@ -1,3 +1,4 @@
+
 // global 요소
 .g_dimmed {
   position: absolute;
@@ -5,12 +6,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 1;
   cursor: pointer;
 }
 
-.g_modal{
+.g_modal {
   position: absolute;
   top: 40px;
   left: 50%;
@@ -20,4 +21,35 @@
   background: #fff;
   transform: translateX(-50%);
   z-index: 2;
+}
+
+// 스와이프요소
+.g_swiper {
+  display: flex;
+
+  &__slide {
+    flex: 0 0 auto;
+  }
+}
+
+// 버튼
+.btn-cls {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+}
+
+.ico_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+
+  i {
+    display: block;
+    width: 40px;
+    height: 40px;
+  }
 }

@@ -1,0 +1,66 @@
+@import "@/assets/scss/style.scss";
+
+.main {
+  &__txt {
+    @include flex-column(flex-start, center);
+  }
+
+  &__desc {
+    width: 100%;
+    padding: 20px 0;
+    color: $point;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  &__title,
+  &__contact {
+    width: 100%;
+    padding: 0 20vw;
+    color: $point;
+    box-sizing: border-box;
+    text-align: center;
+
+   
+  }
+
+  &__contact {
+    @include flex-box(center, center);
+    margin: 4vh 0 2vh;
+    span {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 4px;
+        left: -100%;
+        width: 100%;
+        height: 2px;
+        background: $point;
+        transition: all .5s ease;
+      }
+
+      &:hover::before {
+        left: 0;
+      }
+    }
+  }
+  &__content {
+    margin-top: 2vh;
+
+    &_title {
+      @include flex-column(flex-start, center);
+      gap: 16px;
+      width: 100%;
+      padding: 24px 0;
+      h3 {
+        color: $point;
+      }
+    }
+  }
+}
