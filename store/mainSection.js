@@ -2,7 +2,7 @@ export const state = () => ({
   serviceList: {
     num: ["01", "02", "03"],
     title: ["dog walking", "pet visit", "overnight care"],
-    thumb: ["", "", ""],
+    thumb: ["@/assets/imgs/service/service_01.png", "@/assets/imgs/service/service_02.png", "@/assets/imgs/service/service_03.png"],
     buttonClass: ["main__ico-walk", "main__ico-visit", "main__ico-night"],
   },
 
