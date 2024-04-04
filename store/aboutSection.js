@@ -24,27 +24,23 @@ export const state = () => ({
       num: '01',
       title: "fill out \n the form",
       desc: `Fill out information. upload your photo and become a basic member.`,
-      thumb: '@/assets/imgs/about/about_steps01.png',
     },
     {
       num: '02',
       title: `you are \n being contacted`,
       desc: `Based on your profile we'll show you the members that are near you.`,
-      thumb: '@/assets/imgs/about/about_steps02.png',
     },
     {
       num: '03',
       title: `first meeting`,
       desc: `before you can message and arrange a 'welcome woof' you'll need to
       become a premium member.`,
-      thumb: '@/assets/imgs/about/about_steps03.png',
     },
     {
       num: '04',
       title: `you receive \n quality service`,
       desc: `we recommend members get to know each other really ewll before a dog
       is taken care of by another dog lover.`,
-      thumb: '@/assets/imgs/about/about_steps04.png',
     },
   ]
 });

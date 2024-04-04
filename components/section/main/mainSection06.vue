@@ -1,19 +1,17 @@
 <template>
   <div class="main">
-      <div class="main__txt">found us here</div>
-      <div class="main__title">Don't board me</div>
-      <div class="main__photo">
-        <!-- 사진리스트 ㅎㅎ -->
-      </div>
-    </div>
+    <div class="main__txt">found us here</div>
+    <photoView />
+  </div>
 </template>
 
 <script>
+import photoView from "@/components/atom/photoView.vue";
 export default {
-
-}
+  name: "mainSection06",
+  components: { photoView },
+};
 </script>
-
-<style>
-
+<style lang="scss" scoped>
+@import "@/assets/scss/components/section/main/mainCommon.scss";
 </style>

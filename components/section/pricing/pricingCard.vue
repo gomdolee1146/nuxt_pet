@@ -45,7 +45,7 @@ export default {
     },
   },
   methods:{
-    test(){
+    getCardList(){
       if (this.isShowLast === true) {
         this.isShowBtn = true;
         this.pricingList = _.initial(this.pricingData)
@@ -56,7 +56,7 @@ export default {
     }
   },
   mounted(){
-    this.test()
+    this.getCardList()
   }
 };
 </script>

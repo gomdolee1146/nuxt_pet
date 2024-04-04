@@ -15,7 +15,9 @@
         <div class="main__card_title txt_headline4">{{ steps.title }}</div>
         <div class="main__card_num txt_headline4">{{ steps.num }}.</div>
         <div class="main__card_desc txt_body2">{{ steps.desc }}</div>
-        <div class="main__card_thumb"></div>
+        <div class="main__card_thumb">
+          <img :src="require(`~/assets/imgs/about/about_step${steps.num}.png`)" />
+        </div>
       </div>
     </div>
     <div class="main__desc txt_subtitle2">
