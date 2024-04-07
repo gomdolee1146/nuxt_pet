@@ -17,7 +17,7 @@
               </defs>
               <text dy="70" textLength="1220">
                 <textPath xlink:href="#textcircle_bottom">IT'S MAKE YOUR PETS HAPPY! IT'S MAKE YOUR PETS HAPPY!</textPath>
-                <textPath xlink:href="#textcircle_TOP">ㅎㅎ</textPath>
+                <textPath xlink:href="#textcircle_top">ㅎㅎ</textPath>
               </text>
             </svg>
           </div>

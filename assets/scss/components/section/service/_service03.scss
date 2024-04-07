@@ -1,0 +1,35 @@
+@import "@/assets/scss/style.scss";
+
+.service {
+  @include flex-box(flex-start);
+  width: 100%;
+  height: 100vh;
+  gap: 2px;
+  padding: 2px;
+  background-color: $point;
+  box-sizing: border-box;
+
+  &__card {
+    flex: 1 1 25%;
+    height: 100%;
+    padding: 16px 20px;
+    border-radius: 16px;
+    background-color: $base;
+    box-sizing: border-box;
+    writing-mode: vertical-lr;
+
+    &.on {
+      flex: 1 1 auto;
+      writing-mode: horizontal-tb;
+
+  
+    }
+  }
+  &__txt,
+  &__price,
+  &__title,
+  &__desc,
+  &__btn-booking {
+    color: $point;
+  }
+}

@@ -1,5 +1,5 @@
 export const state = () => ({
-  servicesList: [
+  serviceList: [
     {
       title:'Daily Visit Care (30 min)',
       timeInfo: '0,5 hours',

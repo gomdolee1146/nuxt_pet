@@ -1,9 +1,7 @@
 <template>
-  <transition name="fade">
-    <div class="themePink-theme">
-      <nuxt />
-    </div>
-  </transition>
+  <div class="themePink-theme">
+    <nuxt />
+  </div>
 </template>
 
 <script>

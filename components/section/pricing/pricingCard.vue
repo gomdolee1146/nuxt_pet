@@ -31,8 +31,8 @@
     </div>
     <div class="pricing__card pricing__card-last" v-if="isShowBtn">
       <h4 class="txt_headline6">pricing page</h4>
-      <button class="pricing__btn-go">
-        <i class="ico__arrow-right"></i>
+      <button class="pricing__btn-go" @click="goToPrice">
+        <i class="ico__arrow-right_b"></i>
       </button>
     </div>
   </div>
@@ -68,6 +68,11 @@ export default {
     goToBooking() {
       this.$router.push({
         path: "/booking",
+      });
+    },
+    goToPrice() {
+      this.$router.push({
+        path: "/pricing",
       });
     },
   },

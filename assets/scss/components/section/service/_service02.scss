@@ -1,0 +1,33 @@
+@import "@/assets/scss/style.scss";
+
+.service {
+  width: 100%;
+  padding: 10vh 0;
+  background-color: #fff;
+  box-sizing: border-box;
+
+  &__title {
+    width: 100%;
+    padding: 0 10vw;
+    color: $point;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  &__thumb {
+    margin: 40px auto;
+    width: 80px;
+    height: 80px;
+    border: 4px solid $point;
+    border-radius: 50%;
+    background-color: $base;
+  }
+
+  &__desc {
+    width: 100%;
+    padding: 0 40px;
+    color: $point;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}

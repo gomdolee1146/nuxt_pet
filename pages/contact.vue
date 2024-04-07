@@ -3,10 +3,10 @@
 </template>
 
 <script>
-import contactSection from '@/components/section/contact/contactSection.vue'
+import contactSection from "@/components/section/contact/contactSection.vue";
 export default {
   components: { contactSection },
-  name: 'contact',
-  layout: 'blueLayout'
-}
+  name: "contact",
+  layout: "blueLayout",
+};
 </script>

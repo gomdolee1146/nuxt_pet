@@ -22,7 +22,7 @@
     position: absolute;
     margin-top: 10vh;
     border-radius: 50%;
-    background: linear-gradient(180deg, $base, #ececce);
+    background: icon-img("ball_white", "%23fff") no-repeat center / auto 95%;
     aspect-ratio: 1/1;
 
     &01 {

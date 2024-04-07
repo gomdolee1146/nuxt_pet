@@ -1,11 +1,9 @@
 <template>
-  <transition name="fade">
-    <div class="themeBlue-theme">
-      <navHeader />
-      <nuxt />
-      <footerBox />
-    </div>
-  </transition>
+  <div class="themeBlue-theme">
+    <navHeader />
+    <nuxt />
+    <footerBox />
+  </div>
 </template>
 
 <script>

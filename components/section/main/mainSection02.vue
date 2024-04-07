@@ -14,17 +14,24 @@
           {{ num }}
         </template>
       </div>
-      <div class="main__list_thumb">
-        <img :src="require(`~/assets/imgs/service/service_${num}.png`)" ref="mainThumb" />
+      <div
+        class="main__list_thumb"
+        v-for="(num, idx) in mainService.mainNum"
+        :key="idx"
+      >
+        <img
+          :src="require(`~/assets/imgs/service/service_${num}.png`)"
+          ref="mainThumb"
+        />
         <button class="main__btn-book">BOOK NOW!</button>
       </div>
       <div class="main__list_box main__list-lb">
         <div class="main__progress">
           <div class="main__progress_bg"></div>
-          <div class="main__progress_bar" style="width:10%"></div>
+          <div class="main__progress_bar" style="width: 10%"></div>
         </div>
         <div
-          class="main__list_title txt_headline3"
+          class="main__list_title txt_headline2"
           v-for="(title, idx) in mainService.mainTitle"
           :key="idx"
         >
@@ -80,8 +87,8 @@ export default {
   },
 
   methods: {
-    getNumber(){
-      if (this.indexNum >= 2){
+    getNumber() {
+      if (this.indexNum >= 2) {
         this.indexNum = 0;
       } else {
         this.indexNum++;
@@ -90,9 +97,8 @@ export default {
 
     showContent(idx) {
       if (this.indexNum === idx) return true;
-      else return false
+      else return false;
     },
-    
   },
 };
 </script>

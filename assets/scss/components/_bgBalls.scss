@@ -1,19 +1,19 @@
 @import "@/assets/scss/style.scss";
 
 .main,
-.pricing{
+.pricing {
   &__ball_wrap {
     position: relative;
     width: 100%;
     height: 32vw;
     overflow: hidden;
   }
-  
+
   &__ball {
     position: absolute;
     width: 36vw;
     border-radius: 50%;
-    background:icon-img('ball_white', '%23fff') no-repeat center / auto 95%;
+    background: icon-img("ball_white", "%23fff") no-repeat center / auto 95%;
     z-index: 5;
     aspect-ratio: 1/1;
 
@@ -50,4 +50,3 @@
     }
   }
 }
-

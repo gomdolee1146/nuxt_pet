@@ -126,3 +126,8 @@ $svg-blue-point: "%232B6786";
     background: icon-img("bone", $svg-blue-base) no-repeat center / auto 100%;
   }
 }
+
+.ico__arrow-right_b{
+  background: icon-img('arrow', $svg-blue-base) no-repeat center / auto 100%;
+  transform: rotate(90deg);
+}
