@@ -14,4 +14,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "@/assets/scss/components/section/main/mainCommon.scss";
+.main {
+  padding-top: 12vh;
+}
 </style>

@@ -24,17 +24,16 @@
 
   &__l {
     @include flex-box(flex-start, center);
-    gap: 4vw;
-  }
-  &__logo {
-    width: 100px;
-    height: 100px;
-    background-color: $point;
+    gap: 2vw;
   }
   &__txt {
     span {
       display: block;
     }
+  }
+  &__logo {
+    width: 100px;
+    height: 100px;
   }
 
   &__r {
@@ -81,4 +80,26 @@
 
 .pricing ~ .footer {
   background-color: $base;
+  &__logo {
+    background: url("@/assets/imgs/logo/logo_b.png") no-repeat center / auto
+    100%;
+  }
+}
+
+.themePink-theme {
+  .footer__logo {
+    background: url("@/assets/imgs/logo/logo_r.png") no-repeat center / auto
+      100%;
+  }
+}
+.themeBlue-theme {
+  .footer__logo {
+    background: url("@/assets/imgs/logo/logo_w.png") no-repeat center / auto
+    100%;
+  }
+}
+
+
+.about ~ .footer {
+  background-color: #f9dfe2;
 }

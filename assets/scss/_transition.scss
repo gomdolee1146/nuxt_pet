@@ -73,3 +73,38 @@
 .text-animation.on {
   animation: text-in 0.8s cubic-bezier(0.22, 0.15, 0.25, 1.43) 0s backwards;
 }
+
+// 버튼 hover - 공 애니메이션
+.ani__ball {
+  overflow: hidden;
+  &-txt {
+    position: relative;
+  }
+
+  &-l,
+  &-r {
+    @include position-centerY;
+    display: block;
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    transition: all 0.2s linear;
+  }
+
+  &-l {
+    right: calc(100% + 4px);
+  }
+  &-r {
+    left: 500%;
+  }
+  &:hover {
+    .ani__ball-l {
+      right: 500%;
+    }
+    .ani__ball-r {
+      left: calc(100% + 4px);
+    }
+  }
+}

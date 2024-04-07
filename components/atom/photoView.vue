@@ -1,14 +1,15 @@
 <template>
-  <div class="photo_view">
+  <div class="photo_view" ref="photoView">
+    <div class="mouse__cursor" ref="mouseCursor"></div>
     <div
-      class="photo_view__list"
-      :class="`photo_view__list${setNameList(num)}`"
-      v-for="num in photoCount"
-      :key="num"
-    >
-      <img :src="require(`~/assets/imgs/dog_${setNameList(num)}.png`)" />
-    </div>
-    <div class="photo_view__txt txt_headline2">{{ photoText }}</div>
+        class="photo_view__list"
+        :class="`photo_view__list${setNameList(num)}`"
+        v-for="num in photoCount"
+        :key="num"
+      >
+        <img :src="require(`~/assets/imgs/dog_${setNameList(num)}.png`)" />
+      </div>
+      <div class="photo_view__txt txt_headline2">{{ photoText }}</div>
   </div>
 </template>
 
@@ -28,6 +29,33 @@ export default {
       const result = String(num).padStart(2, "0");
       return result;
     },
+    //  viewMove(e) {
+    // const cursor = this.$refs.mouseCursor;
+    // const photoView = this.$refs.photoView;
+
+    // const cursorRect = cursor.getBoundingClientRect();
+    // gsap.to(cursor, {
+    //   duration: 0.2,
+    //   left: e.pageX - cursorRect.width / 2,
+    //   top: e.pageY - cursorRect.height / 2,
+    // });
+
+    // let mousePageX = e.pageX;
+    // let mousePageY = e.pageY;
+
+    // let centerPageX = window.innerWidth / 2 - mousePageX;
+    // let centerPageY = window.innerHeight / 2 - mousePageY;
+
+    // photoView.style.transform = `translate(${-centerPageX / 20}px, ${
+    //   -centerPageY / 20
+    // }px)`;
+
+    // gsap.to(photoView, {
+    //   duration: 0.3,
+    //   x: centerPageX / 20,
+    //   y: centerPageY / 20,
+    // });
+    //  },
   },
 };
 </script>

@@ -57,14 +57,14 @@
   &__ball07 {
     @include flex-box(center, center);
     width: 26vw;
-    left: 40vw;
+    left: 42vw;
     top: 4vh;
-    background-color: $secondary;
+    background: $secondary !important;
     z-index: 4;
 
     span {
       display: block;
-      margin: 30vh 0 0 4vw;
+      margin: 180px 0 0 80px;
       color: $point;
     }
   }

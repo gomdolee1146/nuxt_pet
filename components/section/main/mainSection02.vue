@@ -15,7 +15,7 @@
         </template>
       </div>
       <div class="main__list_thumb">
-        <!-- <img :src="" ref="mainThumb" /> -->
+        <img :src="require(`~/assets/imgs/service/service_${num}.png`)" ref="mainThumb" />
         <button class="main__btn-book">BOOK NOW!</button>
       </div>
       <div class="main__list_box main__list-lb">

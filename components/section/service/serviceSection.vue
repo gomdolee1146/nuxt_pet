@@ -8,7 +8,7 @@
       <div class="service__arrow"></div>
     </div>
     <div class="service02">
-      <h4>Our services are geared towards meeting your dog’s unique needs</h4>
+      <h4>Our services are geared towards meeting your dog's unique needs</h4>
       <div class="service__thumb"><!-- --></div>
       <p>Our services are geared towards meeting your dog's unique needs. You can rest assured knowing </p>
       <p>that your pets are receiving the highest level of care and attention in the comfort of their own </p>
@@ -23,10 +23,10 @@
 
 <script>
 export default {
-
+  name: 'serviceSection',
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import '@/assets/scss/components/section/service/service.scss';
 </style>

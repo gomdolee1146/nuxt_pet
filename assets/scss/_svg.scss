@@ -88,13 +88,14 @@ $svg-blue-point: "%232B6786";
   }
 
   .ico__arrow-down {
-    background: icon-img("arrow", $svg-pink-point);
+    background: icon-img("arrow", $svg-pink-point) no-repeat center / auto 100%;
+    transform: scaleY(-1);
   }
   .ico__arrow-left {
-    background: icon-img("chevron-left", $svg-pink-point) no-repeat center;
+    background: icon-img("chevron-left", $svg-pink-point) no-repeat center / auto 100%;
   }
   .ico__arrow-right {
-    background: icon-img("chevron-left", $svg-pink-point) no-repeat center;
+    background: icon-img("chevron-left", $svg-pink-point) no-repeat center / auto 100%;
     transform: scaleX(-1);
   }
   .ico__bone {
@@ -109,19 +110,19 @@ $svg-blue-point: "%232B6786";
   }
 
   .ico__arrow-down {
-    background: icon-img("arrow", $svg-blue-point);
+    background: icon-img("arrow", $svg-blue-point) no-repeat center / auto 100%;
     transform: scaleY(-1);
   }
 
   .ico__arrow-left {
-    background: icon-img("chevron-left", $svg-blue-point) no-repeat center;
+    background: icon-img("chevron-left", $svg-blue-point) no-repeat center / auto 100%;
   }
   .ico__arrow-right {
-    background: icon-img("chevron-left", $svg-blue-point) no-repeat center;
+    background: icon-img("chevron-left", $svg-blue-point) no-repeat center / auto 100%;
     transform: scaleX(-1);
   }
 
   .ico__bone {
-    background: icon-img("bone", $svg-blue-base);
+    background: icon-img("bone", $svg-blue-base) no-repeat center / auto 100%;
   }
 }

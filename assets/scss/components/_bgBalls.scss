@@ -13,7 +13,7 @@
     position: absolute;
     width: 36vw;
     border-radius: 50%;
-    background-color: $base;
+    background:icon-img('ball_white', '%23fff') no-repeat center / auto 95%;
     z-index: 5;
     aspect-ratio: 1/1;
 
@@ -21,6 +21,7 @@
       width: 30vw;
       left: -4vw;
       top: -16vh;
+      transform: rotate(80deg);
     }
 
     &02 {
@@ -31,7 +32,6 @@
       width: 21vw;
       left: 44vw;
       top: -7vh;
-      background: linear-gradient(180deg, $base, #ececce);
     }
     &04 {
       width: 24vw;
@@ -50,3 +50,4 @@
     }
   }
 }
+

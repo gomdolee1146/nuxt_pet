@@ -3,6 +3,54 @@
 .about {
   position: relative;
   width: 100%;
-  height: 50vh;
-  background-color: $primary;
+  min-height: 100vh;
+  padding: 8vh 0;
+  background-color: $base;
+  box-sizing: border-box;
+
+  &__bg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100vw 100vw 0 0;
+    background-color: $primary;
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 250px;
+    color: $point;
+    text-align: center;
+  }
+  &__thumb {
+    @include position-centerX;
+    display: block;
+    position: absolute;
+    bottom: -50%;
+    width: 240px;
+    height: 240px;
+    border: 10px solid $primary;
+    background: $base;
+    border-radius: 50%;
+    z-index: 1;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__desc {
+    @include position-centerX;
+    position: absolute;
+    bottom: 8vh;
+    width: 50vw;
+    color: $point;
+    text-align: center;
+  }
 }

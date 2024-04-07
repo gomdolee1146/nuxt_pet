@@ -54,3 +54,16 @@ export const state = () => ({
     },
   ],
 });
+
+
+export const mutation = () => ({
+  SAVE_BOOKINFO(state, bookInfo){
+    state.userAnswerList.push(bookInfo)
+  }
+})  
+
+export const action = () => ({
+  saveBookingInfo({commit}, bookInfo){
+    commit('SAVE_BOOKINFO', bookInfo)
+  }
+})

@@ -1,0 +1,69 @@
+@import "@/assets/scss/style.scss";
+
+.about {
+  position: relative;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1/1;
+
+  &__bg,
+  &__ball {
+    @include position-center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  &__bg {
+    background-color: $primary;
+    opacity: 0.4;
+  }
+  &__ball {
+    background: icon-img('ball_white', '%23fff') no-repeat top center / 105vw auto;
+    z-index: 1;
+  }
+
+  &__wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40vh 12vw;
+    margin-bottom: 20vh;
+    box-sizing: border-box;
+    z-index: 10;
+  }
+  &__box {
+    position: relative;
+    width: max-content;
+  }
+  &__btn-booking {
+    @include flex-box(center, center);
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: $primary;
+    color: $point;
+    cursor: pointer;
+  }
+
+
+  &__title,
+  &__txt {
+    color: $point;
+  }
+  &__title {
+    width: max-content;
+  }
+  &__txt {
+    @include position-centerX;
+    position: absolute;
+    bottom: 16vh;
+    width: 100%;
+    padding: 0 16vw;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
