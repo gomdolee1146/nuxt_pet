@@ -3,10 +3,10 @@
       <div class="about__bg"></div>
       <div class="about__bg_round"></div>
       <div class="about__wrap">
-        <h4 class="txt_subtitle2">About us</h4>
+        <h4 class="txt_h8">About us</h4>
         <div class="about__title">
-          <h1 class="txt_headline2">WHAT IS DON'T </h1>
-          <h1 class="txt_headline2">BOARD ME</h1>
+          <h1 class="txt_h2">WHAT IS DON'T </h1>
+          <h1 class="txt_h2">BOARD ME</h1>
         </div>
         <div class="about__arrow ico__arrow-down"></div>
       </div>

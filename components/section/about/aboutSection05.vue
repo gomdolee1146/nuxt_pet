@@ -2,7 +2,7 @@
   <div class="about">
     <div class="about__bg"></div>
     <div class="about__wrap">
-      <h4 class="about__title txt_headline2">
+      <h4 class="about__title txt_h2">
         Whether you require daily visits, overnight stays, extended in- home
         care for long periods of travel, or a trusted dog walker our team is
         here to make your time

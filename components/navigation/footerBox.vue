@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer txt_subtitle1">
+  <footer class="footer txt_h7">
     <div class="footer__top">
       <div class="footer__l">
         <div class="footer__logo"></div>

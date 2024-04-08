@@ -5,7 +5,6 @@
 
   &__bg {
     height: 80vh;
-    // border-radius: 0 0 20% 20%;
     background-color: $secondary;
   }
   &__title-l,
@@ -26,11 +25,13 @@
   &__center {
     position: absolute;
     @include position-center;
-    width: 72vh;
-    height: 72vh;
+    width: 70vh;
+    height: 70vh;
+    border: 30px solid $secondary;
     border-radius: 50%;
     background-color: $primary;
-    z-index: 1;
+    box-sizing: border-box;
+    z-index: 5;
 
     svg {
       width: 100%;
@@ -43,6 +44,46 @@
       }
     }
   }
+
+  &__circle-l,
+  &__circle-r,
+  &__circle-btm {
+    width: 44vh;
+    height: 36vh;
+    position: absolute;
+    background-color: $base;
+    z-index: 1;
+  }
+  &__circle-l {
+    left: 0;
+    bottom: 10vh;
+    border-radius: 0 200px 0 0;
+    &::before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: calc(100vw - 89.7vh);
+      left: 100%;
+      bottom: 0vh;
+      height: 50%;
+      border-radius: 0 0 100px 100px;
+      background-color: $secondary;
+      z-index: 10000;
+    }
+  }
+  &__circle-r {
+    right: 0;
+    bottom: 10vh;
+    border-radius: 200px 0 0 0;
+  }
+  &__circle-btm {
+    width: 100vw;
+    height: 20vh;
+    @include position-centerX;
+    bottom: 0;
+    z-index: 0;
+  }
+
   &__thumb {
     position: absolute;
     @include position-center;
@@ -51,6 +92,6 @@
     min-height: 120px;
     height: 24vh;
     border-radius: 50%;
-    background-color: #fff;
+    background: $tertiary;
   }
 }

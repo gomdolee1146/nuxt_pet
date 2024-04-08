@@ -10,7 +10,7 @@
         <i class="ico__arrow-right"></i>
       </button>
       <div class="booking__box" v-if="this.step === 1">
-        <h4 class="booking__title txt_headline5">
+        <h4 class="booking__title txt_h5">
           {{ bookingQuestion[0].title }}
         </h4>
         <select class="booking__select" v-model="optionGroup.option">
@@ -23,7 +23,7 @@
         </select>
       </div>
       <div class="booking__box" v-if="this.step === 2">
-        <h4 class="booking__title txt_headline5">
+        <h4 class="booking__title txt_h5">
           {{ bookingQuestion[1].title }}
         </h4>
         <input
@@ -33,13 +33,13 @@
         />
       </div>
       <div class="booking__box" v-if="this.step === 3">
-        <h4 class="booking__title txt_headline5">
+        <h4 class="booking__title txt_h5">
           {{ bookingQuestion[2].title }}
         </h4>
         <input type="text" class="booking__input" v-model="optionGroup.time" />
       </div>
       <div class="booking__box" v-if="this.step === 4">
-        <h4 class="booking__title txt_headline5">
+        <h4 class="booking__title txt_h5">
           {{ bookingQuestion[3].title }}
         </h4>
         <div
@@ -57,7 +57,7 @@
         </div>
       </div>
       <div class="booking__box" v-if="this.step === 5">
-        <h4 class="booking__title txt_headline5">
+        <h4 class="booking__title txt_h5">
           {{ bookingQuestion[4].title }}
         </h4>
         <div class="booking__input_wrap">
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="booking__box" v-if="this.step === 6">
-        <h4 class="booking__title txt_headline5">
+        <h4 class="booking__title txt_h5">
           {{ bookingQuestion[5].title }}
         </h4>
         <div class="booking__input_wrap">
@@ -92,7 +92,7 @@
       </div>
 
       <button
-        class="booking__btn-next txt_body1"
+        class="booking__btn-next txt_h8"
         :class="isActive ? 'on' : ''"
         @click="goToNext"
       >

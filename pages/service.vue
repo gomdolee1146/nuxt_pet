@@ -1,18 +1,13 @@
 <template>
-  <div class="service">
-    <serviceSection01 />
-    <serviceSection02 />
-    <serviceSection03 />
-  </div>
+  <serviceWrap />
 </template>
 
 <script>
-import serviceSection01 from "@/components/section/service/serviceSection01.vue";
-import serviceSection02 from "@/components/section/service/serviceSection02.vue";
-import serviceSection03 from "@/components/section/service/serviceSection03.vue";
+import serviceWrap from "@/components/section/service/serviceWrap.vue";
+
 export default {
   name: "service",
-  components: { serviceSection01, serviceSection02, serviceSection03 },
+  components: { serviceWrap },
   layout: "noFooter",
 };
 </script>

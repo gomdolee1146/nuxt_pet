@@ -1,10 +1,10 @@
 <template>
   <div class="contact">
-    <h2 class="contact__title txt_headline1">get in touch</h2>
+    <h2 class="contact__title txt_h1">get in touch</h2>
     <div class="contact__bg">
     </div>
     <div class="contact__form_wrap">
-      <h4 class="txt_headline4">got a question?</h4>
+      <h4 class="txt_h4">got a question?</h4>
       <div class="contact__form">
         <input type="text" class="contact__input" v-model="contactName" />
         <input type="text" class="contact__input" v-model="contactEmail" />

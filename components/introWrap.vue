@@ -1,9 +1,9 @@
 <template>
   <div class="intro">
-    <div class="intro__center txt_headline2">
+    <div class="intro__center txt_h2">
       Loading <span ref="introCountNum">0</span>%...
     </div>
-    <div class="intro__btm txt_headline5">
+    <div class="intro__btm txt_h5">
       You've landed on a dog walking site. Follow our rules to keep your dog
       happy.
     </div>

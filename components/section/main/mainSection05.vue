@@ -2,12 +2,12 @@
   <div class="themeBlue-theme">
     <div class="main">
       <div class="main__txt">
-        <h5 class="main__desc txt_headline5">book your consult</h5>
+        <h5 class="main__desc txt_h5">book your consult</h5>
         <div class="ico_box">
           <i class="ico__arrow-down"></i>
         </div>
-        <h1 class="main__title txt_headline1">HAVE QUESTION?</h1>
-        <h3 class="main__contact txt_headline3"><p>contact us at</p> <span>858-449-2691.</span></h3>
+        <h1 class="main__title txt_h1">HAVE QUESTION?</h1>
+        <h3 class="main__contact txt_h3"><p>contact us at</p> <span>858-449-2691.</span></h3>
         <button class="main__btn-book">Book now</button>
       </div>
       <div class="main__content">
@@ -15,7 +15,7 @@
           <div class="ico_box">
             <i class="ico__bone"></i>
           </div>
-          <h3 class="txt_headline3">Cost of walking</h3>
+          <h3 class="txt_h3">Cost of walking</h3>
         </div>
         <div class="main__content_box">
           <pricingCard :isShowLast="true" />

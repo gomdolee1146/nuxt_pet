@@ -4471,7 +4471,7 @@
   "resolved" "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz"
   "version" "4.2.11"
 
-"gsap@3.12":
+"gsap@^3.11.0", "gsap@3.12":
   "integrity" "sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ=="
   "resolved" "https://registry.npmjs.org/gsap/-/gsap-3.12.5.tgz"
   "version" "3.12.5"
@@ -5871,6 +5871,13 @@
   "version" "2.1.1"
   dependencies:
     "boolbase" "^1.0.0"
+
+"nuxt-gsap-module@^1.7.2":
+  "integrity" "sha512-pVHsHv8Ra9Fn7CcuaWoG5MgigYwonNJipI/NGX8X5ta2IBitNWOYTgB+vHt1zYHUxo6lFaoptw1QrABm4hknQQ=="
+  "resolved" "https://registry.npmjs.org/nuxt-gsap-module/-/nuxt-gsap-module-1.7.2.tgz"
+  "version" "1.7.2"
+  dependencies:
+    "gsap" "^3.11.0"
 
 "nuxt@^2.15.8":
   "integrity" "sha512-mQUy0J2DYYxHZvgBX8YvrrM8sKUhBqBxcQ0ePjy7cdyTaDAN8QeOLrizINm7NVPMrFGLYurhp5rbX3/qyQcKyg=="

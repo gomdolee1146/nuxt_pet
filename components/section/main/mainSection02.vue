@@ -1,12 +1,12 @@
 <template>
   <div class="main">
-    <div class="main__title txt_headline1">Our services</div>
+    <div class="main__title txt_h1">Our services</div>
     <div class="ico_box">
       <i class="ico__arrow-down"></i>
     </div>
     <div class="main__list">
       <div
-        class="main__list_num txt_headline2"
+        class="main__list_num txt_h2"
         v-for="(num, idx) in mainService.mainNum"
         :key="idx"
       >
@@ -31,7 +31,7 @@
           <div class="main__progress_bar" style="width: 10%"></div>
         </div>
         <div
-          class="main__list_title txt_headline2"
+          class="main__list_title txt_h2"
           v-for="(title, idx) in mainService.mainTitle"
           :key="idx"
         >

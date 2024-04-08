@@ -5,12 +5,13 @@
       v-for="(service, idx) in serviceData"
       :key="idx"
       :class="{ on: activeIndex === idx }"
+      @click="changeIndexNum(idx)"
     >
-      <div class="service__txt txt_body2">{{ service.title }}</div>
+      <div class="service__txt txt_h9">{{ service.title }}</div>
       <template v-if="activeIndex === idx">
-        <div class="service__price txt_body2">{{ service.priceInfo }}</div>
-        <div class="service__title txt_headline2">{{ service.title }}</div>
-        <div class="service__desc txt_body2">{{ service.desc }}</div>
+        <div class="service__price txt_h9">{{ service.priceInfo }}</div>
+        <div class="service__title txt_h2">{{ service.title }}</div>
+        <div class="service__desc txt_h9">{{ service.desc }}</div>
         <button class="service__btn-booking">book now</button>
       </template>
     </div>
@@ -30,6 +31,11 @@ export default {
       return this.$store.state.serviceSection.serviceList;
     },
   },
+  methods:{
+    changeIndexNum(num){
+      this.activeIndex = num
+    }
+  }
 };
 </script>
 

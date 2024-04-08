@@ -1,7 +1,7 @@
 <template>
   <div class="service">
-    <div class="service__title txt_headline1">Our services</div>
-    <p class="service__desc txt_body2">
+    <div class="service__title txt_h1">Our services</div>
+    <p class="service__desc txt_h9">
       <span>help to ensure your furry family member </span>
       <span>is as happy as can be!</span>
     </p>

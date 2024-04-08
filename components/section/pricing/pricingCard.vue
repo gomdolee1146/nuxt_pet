@@ -9,8 +9,8 @@
         <div class="pricing__badge txt_caption" v-if="pricingInfo.popular">
           MOST POPULAR
         </div>
-        <h4 class="txt_headline6">{{ pricingInfo.name }}</h4>
-        <h2 class="txt_headline3">
+        <h4 class="txt_h6">{{ pricingInfo.name }}</h4>
+        <h2 class="txt_h3">
           {{ pricingInfo.price
           }}<span class="pricing__card_period">{{
             pricingInfo.period === "month" ? `/MO.` : ""
@@ -19,7 +19,7 @@
         <p class="pricing__txt">{{ pricingInfo.desc }}</p>
       </div>
       <button
-        class="pricing__btn pricing__btn-try txt_subtitle2 ani__ball"
+        class="pricing__btn pricing__btn-try txt_h8 ani__ball"
         @click="goToBooking"
       >
         <span class="ani__ball-txt">
@@ -30,7 +30,7 @@
       </button>
     </div>
     <div class="pricing__card pricing__card-last" v-if="isShowBtn">
-      <h4 class="txt_headline6">pricing page</h4>
+      <h4 class="txt_h6">pricing page</h4>
       <button class="pricing__btn-go" @click="goToPrice">
         <i class="ico__arrow-right_b"></i>
       </button>

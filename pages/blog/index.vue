@@ -8,6 +8,6 @@ import blogList from "@/components/section/blog/blogList.vue";
 export default {
   name: "blog",
   components: { blogList },
-  layouts: 'default'
+  layout: "pinkLayout",
 };
 </script>

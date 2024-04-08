@@ -30,10 +30,17 @@ export default {
 
   buildModules: [
     '@nuxtjs/style-resources',
+    'nuxt-gsap-module'
   ],
 
   modules: [
   ],
+
+  gsap: {
+    extraPlugins: {
+      scrollTrigger: true,
+    },
+  },
 
   build: {
   }

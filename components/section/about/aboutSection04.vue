@@ -5,10 +5,10 @@
         <div class="about__swiper">
           <div class="about__swiper-l">
             <div class="about__swiper_box">
-              <h4 class="txt_headline2">{{ blogContent.num }}</h4>
-              <h2 class="txt_headline3">{{ blogContent.title }}</h2>
+              <h4 class="txt_h2">{{ blogContent.num }}</h4>
+              <h2 class="txt_h3">{{ blogContent.title }}</h2>
             </div>
-            <p class="txt_headline6">{{ blogContent.desc }}</p>
+            <p class="txt_h6">{{ blogContent.desc }}</p>
           </div>
           <div class="about__swiper-r">
             <img

@@ -3,15 +3,15 @@
     <div class="main__circle"></div>
 
     <div class="main__wrap">
-      <div class="main__desc txt_headline5">
+      <div class="main__desc txt_h5">
         <span>the personalized in-home</span
         ><span> care your pet deserves!</span>
       </div>
       <div class="ico_box">
         <i class="ico__arrow-down"></i>
       </div>
-      <div class="main__title txt_headline1">
-        <span> the care your</span><span> pet deserves!</span>
+      <div class="main__title txt_h1">
+        <span>the care your</span><span>pet deserves!</span>
       </div>
       <div class="main__ball_wrap">
         <div
@@ -23,7 +23,7 @@
       </div>
       <div class="main__swiper">
         <div class="main__swiper_bg"></div>
-        <div class="main__swiper_title txt_headline5">testimonials</div>
+        <div class="main__swiper_title txt_h5">testimonials</div>
         <div class="main__swiper-title">
           <swiper
             :options="swiperTitleOption"
@@ -31,8 +31,8 @@
             @slideChange="changeActiveSlide"
           >
             <swiper-slide v-for="(review, idx) in reviewList" :key="idx">
-              <div class="txt_subtitle1">{{ review.num }}</div>
-              <div class="txt_headline5">{{ review.name }}</div>
+              <div class="txt_h7">{{ review.num }}</div>
+              <div class="txt_h5">{{ review.name }}</div>
             </swiper-slide>
           </swiper>
         </div>
@@ -40,7 +40,7 @@
         <div class="main__swiper-card">
           <swiper :options="swiperCardOption" ref="swiperReview">
             <swiper-slide v-for="(review, idx) in reviewList" :key="idx">
-              <div class="txt_headline3" @click="showReviewSheet(idx)">
+              <div class="txt_h3" @click="showReviewSheet(idx)">
                 {{ review.title }}
               </div>
             </swiper-slide>
@@ -53,11 +53,11 @@
         <div class="main__bg"></div>
       </div>
     </div>
-    <reviewSheet
+    <!-- <reviewSheet
       v-if="isShow"
       :reviewData="reviewData"
       @hideReviewSheet="toggleReviewSheet"
-    />
+    /> -->
   </div>
 </template>
 <script>
