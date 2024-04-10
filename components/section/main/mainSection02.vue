@@ -23,7 +23,13 @@
           :src="require(`~/assets/imgs/service/service_${num}.png`)"
           ref="mainThumb"
         />
-        <button class="main__btn-book">BOOK NOW!</button>
+        <button class="main__btn-book ani__ball">
+          <span class="ani__ball-txt">
+            <i class="ani__ball-l"></i>
+            BOOK NOW!
+            <i class="ani__ball-r"></i>
+          </span>
+        </button>
       </div>
       <div class="main__list_box main__list-lb">
         <div class="main__progress">

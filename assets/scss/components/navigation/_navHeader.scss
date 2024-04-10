@@ -56,6 +56,32 @@
         left: 0;
       }
     }
+
+    &.on {
+      @include flex-column(flex-start, center);
+      button {
+        margin-bottom: 12px;
+        font-size: 24px;
+
+        &:hover::before,
+        &:hover::after {
+          position: absolute;
+          width: 24px;
+          height: 24px;
+          background: icon-img("ball_yellow", "%23fff") no-repeat center / auto
+            100%;
+          transform: translate(-50%, -50%);
+        }
+        &:hover::before {
+          top: 0;
+          left: 0;
+        }
+        &:hover::after {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
   }
 
   &__right {
@@ -115,9 +141,9 @@
     background-color: $point;
     border-radius: 9px;
     opacity: 1;
-    
+
     transform: rotate(0deg);
-    transition: .25s ease-in-out;
+    transition: 0.25s ease-in-out;
     transform-origin: left center;
     left: 0;
 

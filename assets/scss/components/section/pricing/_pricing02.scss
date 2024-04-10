@@ -32,10 +32,17 @@
     border-radius: 50%;
     background-color: $point;
     aspect-ratio: 1/1;
+    animation: rotateAlways 3s ease infinite;
 
     text {
       font-size: 60px;
       fill: $base;
+    }
+    i {
+      @include position-center;
+      position: absolute;
+      width: 48px;
+      height: 48px;
     }
   }
   &__box {

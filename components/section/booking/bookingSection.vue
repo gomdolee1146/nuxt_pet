@@ -122,7 +122,7 @@ export default {
       },
     };
   },
-  method: {
+  methods: {
     goToPrev() {
       if (this.step < 1) {
         console.log("확인필요함");

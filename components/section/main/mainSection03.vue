@@ -23,7 +23,13 @@
     <div class="main__desc txt_h8">
       just fill out the form, <br /> and we'll be happy to assist you with your pet.
     </div>
-    <button class="main__btn-book">BOOK NOW</button>
+    <button class="main__btn-book">
+      <span class="ani__ball-txt">
+          <i class="ani__ball-l"></i>
+          TRY IT!
+          <i class="ani__ball-r"></i>
+        </span>
+    </button>
   </div>
 </template>
 

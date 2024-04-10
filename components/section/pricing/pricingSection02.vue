@@ -28,11 +28,12 @@
             <textPath xlink:href="#textcircle_top">addition!</textPath>
           </text>
         </svg>
+        <i class="ico__ball"></i>
       </div>
     </div>
     <div class="pricing__box">
       <div class="ico_box">
-        <i></i>
+        <i class="ico__bone"></i>
         <span class="txt_h9">More walks <br />more savings</span>
       </div>
     </div>

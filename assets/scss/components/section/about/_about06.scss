@@ -55,6 +55,7 @@
     color: $point;
   }
   &__title {
+    position: relative;
     width: max-content;
   }
   &__txt {

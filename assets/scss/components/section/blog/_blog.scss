@@ -8,9 +8,16 @@
   box-sizing: border-box;
 
   &__title {
+    position: relative;
     width: 100%;
     color: $point;
     text-align: center;
+
+    i {
+      position: absolute;
+      left: 50%;
+      top: -10px;
+    }
   }
   &__top {
   }
@@ -40,6 +47,27 @@
   &__lst {
     padding: 16px 20px;
     box-sizing: border-box;
+
+    i {
+      position: absolute;
+
+      &.ico__ball {
+        position: absolute;
+        top: 20%;
+        left: -10px;
+        &:nth-child(2),
+        &:nth-of-type(2) {
+          position: absolute;
+          bottom: 20%;
+          right: -10px;
+        }
+      }
+      &.ico__bone-default {
+        position: absolute;
+        bottom: 20%;
+        right: -10px;
+      }
+    }
   }
 
   &__box {

@@ -1,6 +1,9 @@
 <template>
   <div class="blog">
-    <div class="blog__title txt_h1">don't board me blog</div>
+    <div class="blog__title txt_h1">
+      don't board me blog
+      <i class="ico__ball"></i>
+    </div>
     <div class="blog__top">
       <div class="blog__filter">
         <button
@@ -14,6 +17,9 @@
     </div>
     <ul class="blog__list">
       <li class="blog__lst" v-for="(blogContent, idx) in blogData" :key="idx">
+        <i class="ico__ball"></i>
+        <i class="ico__ball" v-if="idx % 2 === 0"></i>
+        <i class="ico__bone-default" v-else></i>
         <nuxt-link
           :to="{
             name: 'blog-detail',

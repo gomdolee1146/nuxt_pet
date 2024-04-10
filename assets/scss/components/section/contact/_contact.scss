@@ -6,13 +6,20 @@
   padding-top: 20vh;
   background-color: $primary;
 
- &__title{
+  &__title {
     color: $point;
     text-align: center;
+
+    i {
+      position: absolute;
+      left: 50%;
+      top: -10px;
+      z-index: 1;
+    }
   }
 
   &__form_wrap {
-    margin-top: 4vh;
+    margin: 4vh 0 12vh;
     h4 {
       color: $point;
       text-align: center;
@@ -33,10 +40,15 @@
     background: $base;
     color: $point;
     box-sizing: border-box;
+
+    &::placeholder {
+      color: $point;
+      letter-spacing: -0.08em;
+    }
   }
 
   &__textarea {
-    height: 200px;
+    height: 480px;
   }
 
   &__btn {
@@ -47,5 +59,6 @@
     border-radius: 24px;
     background-color: $point;
     color: $base;
+    text-align: center;
   }
 }

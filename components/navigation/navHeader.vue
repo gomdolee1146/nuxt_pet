@@ -4,15 +4,14 @@
       <a class="header__logo" @click="goToPage('/')"></a>
     </div>
     <div class="header__center">
-     
-      <div class="header__nav_ico" v-if="isScroll && isHeaderOn">
+      <div class="header__nav_ico" v-if="isScroll && !isHeaderFull">
         <span></span>
         <span></span>
         <span></span>
       </div>
 
       <template v-else>
-        <div class="header__nav_wrap">
+        <div class="header__nav_wrap" :class="{ isHeaderFull: 'on' }">
           <button
             class="header__nav_btn"
             v-for="(menu, idx) in navMenu"
@@ -21,6 +20,14 @@
           >
             {{ menu.txt }}
           </button>
+          <template v-if="isHeaderFull">
+            <div
+              class="header__nav_circle"
+              v-for="circle in 5"
+              :key="circle"
+              :class="`header__nav_circle${circle}`"
+            ></div>
+          </template>
         </div>
       </template>
     </div>
@@ -39,7 +46,7 @@ export default {
   props: {},
   data() {
     return {
-      isHeaderOn: false,
+      isHeaderFull: false,
       isScroll: false,
     };
   },

@@ -9,5 +9,6 @@ export default {
   name: "aboutus",
   components: { aboutWrap },
   layout: "pinkLayout",
+ 
 };
 </script>
