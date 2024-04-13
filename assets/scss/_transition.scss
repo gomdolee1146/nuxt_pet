@@ -9,14 +9,14 @@
   transform: scale(0);
 }
 
-// .fade-enter-active,
-// .fade-leave-active {
-//   transition: opacity 0.8s;
-// }
-// .fade-enter,
-// .fade-leave-to {
-//   opacity: 0;
-// }
+.slide-up-enter-active,
+.slide-up-leave-active {
+}
+.slide-up-enter,
+.slide-up-leave-active {
+  transform: translateY(0);
+}
+
 
 // text-animation
 @keyframes text-in {

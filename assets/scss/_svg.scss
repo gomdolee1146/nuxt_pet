@@ -17,6 +17,11 @@
       "%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' fill='none'%3E%3Crect width='103.911' height='103.911' x='2.484' y='6.088' fill='%23F3F3E9' rx='50'/%3E%3Cpath stroke='%23FCFCF7' stroke-linecap='round' stroke-width='3' d='M11.836 23.753S20 49.441 47.414 66.955c29.877 19.088 54.825 18.097 54.825 18.097'/%3E%3Cpath stroke='%23FCFCF7' stroke-linecap='round' stroke-width='3' d='M107.514 53.192S87.134 52.05 78.088 68.01c-9.858 17.395-7.022 39.389-7.022 39.389M7.68 81.94s27.622 2.555 44.644-11.949c18.551-15.807 5.235-65.464 5.235-65.464'/%3E%3C/svg%3E",
     ball_pink:
       "%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' fill='none'%3E%3Crect width='103.911' height='103.911' x='2.484' y='6.088' fill='%23F4CED3' rx='50'/%3E%3Cpath stroke='%23F3F3E9' stroke-linecap='round' stroke-width='3' d='M11.836 23.753S20 49.441 47.414 66.954c29.877 19.089 54.825 18.098 54.825 18.098'/%3E%3Cpath stroke='%23F3F3E9' stroke-linecap='round' stroke-width='3' d='M107.514 53.192S87.134 52.05 78.088 68.01c-9.858 17.395-7.022 39.389-7.022 39.389M7.68 81.94s27.622 2.555 44.643-11.949c18.552-15.807 5.235-65.464 5.235-65.464'/%3E%3C/svg%3E",
+
+    walk:'',
+    visit:'',
+    night:'',
+
   );
   $icon: map-get($icon-list, $icon-name);
   @return url("data:image/svg+xml;charset=utf8,#{$icon}");

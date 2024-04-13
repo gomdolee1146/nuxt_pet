@@ -78,6 +78,10 @@
     &:last-child {
       margin-bottom: 0;
     }
+
+    &-walk {}
+    &-visit {}
+    &-night {}
   }
   &__circle{
     position: absolute;

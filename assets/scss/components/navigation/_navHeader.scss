@@ -124,7 +124,7 @@
   }
 }
 
-.header__nav_ico {
+.ico__menu {
   width: 40px;
   height: 40px;
   position: relative;
@@ -175,5 +175,36 @@
         left: 8px;
       }
     }
+  }
+}
+
+.header__nav_circle {
+  position: absolute;
+  top: 60%;
+  width: calc(100vw / 5);
+  border-radius: 50%;
+  background-color: $base;
+  aspect-ratio: 1/1;
+
+  &1 {
+    left: 0;
+    top: 54%;
+  }
+  &2 {
+    left: 25%;
+    top: 57%;
+    transform: translateX(-50%);
+  }
+  &3 {
+    @include position-centerX;
+  }
+  &4 {
+    right: 25%;
+    top: 57%;
+    transform: translateX(50%);
+  }
+  &5 {
+    right: 0;
+    top: 54%;
   }
 }

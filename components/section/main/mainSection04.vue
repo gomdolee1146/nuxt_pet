@@ -1,7 +1,6 @@
 <template>
   <div class="main">
     <div class="main__circle"></div>
-
     <div class="main__wrap">
       <div class="main__desc txt_h5">
         <span>the personalized in-home</span
@@ -25,11 +24,7 @@
         <div class="main__swiper_bg"></div>
         <div class="main__swiper_title txt_h5">testimonials</div>
         <div class="main__swiper-title">
-          <swiper
-            :options="swiperTitleOption"
-            ref="swiperTop"
-            @slideChange="changeActiveSlide"
-          >
+          <swiper :options="swiperTitleOption" ref="swiperTop">
             <swiper-slide v-for="(review, idx) in reviewList" :key="idx">
               <div class="txt_h7">{{ review.num }}</div>
               <div class="txt_h5">{{ review.name }}</div>
@@ -53,11 +48,11 @@
         <div class="main__bg"></div>
       </div>
     </div>
-    <!-- <reviewSheet
+    <reviewSheet
       v-if="isShow"
       :reviewData="reviewData"
-      @hideReviewSheet="toggleReviewSheet"
-    /> -->
+      @hideReviewSheet="test"
+    />
   </div>
 </template>
 <script>
@@ -74,7 +69,7 @@ export default {
         notNextTick: true,
         navigation: true,
         thumbs: { swiper: this.$refs.swiperReview },
-        slidesPerView: 3,
+        slidesPerView: 5,
         centeredSlides: true,
         loop: true,
         wrapperClass: "g_swiper",
@@ -97,26 +92,23 @@ export default {
       this.reviewData = this.reviewList[idx];
       document.body.style.overflow = "hidden";
     },
-    changeActiveSlide() {
-      const swiperTop = this.$refs.swiperTop.$swiper;
-      const swiperReview = this.$refs.swiperReview.$swiper;
-      console.log('Top',swiperTop.activeIndex)
-      console.log(swiperTop)
-      // swiperReview.params.control = swiperTop;
-      // swiperReview.params.control.activeIndex = 4
-    },
+    test(data){
+      this.isShow = data;
+      document.body.style.overflow = "";
+    }
   },
   computed: {
     reviewList() {
       return this.$store.state.mainSection.reviewList;
     },
-    // setCardsSwiper(swiper) {
-    //   this.$refs.swiperReview = swiper;
-    // },
-    toggleReviewSheet(data) {
-      this.isShow = data;
-      console.log("받아", data);
-    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      const swiperTop = this.$refs.swiperTop.$swiper;
+      const swiperReview = this.$refs.swiperReview.$swiper;
+      swiperTop.controller.control = swiperReview;
+      swiperReview.controller.control = swiperTop;
+    });
   },
 };
 </script>

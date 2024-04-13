@@ -3,7 +3,7 @@
     <h4 class="service__title txt_h2">
       Our services are geared towards meeting your dog's unique needs
     </h4>
-    <div class="service__thumb"><!-- --></div>
+    <div class="service__thumb"></div>
     <div class="service__desc txt_h8">
       <p>
         Our services are geared towards meeting your dog's unique needs. You can

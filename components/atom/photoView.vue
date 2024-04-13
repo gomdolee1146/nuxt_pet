@@ -1,5 +1,5 @@
 <template>
-  <div class="photo_view" ref="photoView" @mouseenter="viewMove">
+  <div class="photo_view" ref="photoView" @mousemove="viewMove">
     <div class="mouse__cursor" ref="mouseCursor"></div>
     <div
       class="photo_view__list"
@@ -32,31 +32,26 @@ export default {
     viewMove(e) {
       const gsap = this.$gsap;
       const cursor = this.$refs.mouseCursor;
-    //   const photoView = this.$refs.photoView;
+      const photoView = this.$refs.photoView;
 
       const cursorRect = cursor.getBoundingClientRect();
       gsap.to(cursor, {
-        duration: 0.2,
+        duration: 0.5,
         left: e.pageX - cursorRect.width / 2,
         top: e.pageY - cursorRect.height / 2,
       });
 
-    //   let mousePageX = e.pageX;
-    //   let mousePageY = e.pageY;
+      let mousePageX = e.pageX;
+      let mousePageY = e.pageY;
 
-    //   let centerPageX = window.innerWidth / 2 - mousePageX;
-    //   let centerPageY = window.innerHeight / 2 - mousePageY;
+      let centerPageX = window.innerWidth / 2 - mousePageX;
+      let centerPageY = window.innerHeight / 2 - mousePageY;
 
-    //   photoView.style.transform = `translate(${-centerPageX / 20}px, ${
-    //     -centerPageY / 20
-    //   }px)`;
-
-    //   gsap.to(photoView, {
-    //     duration: 0.3,
-    //     x: centerPageX / 20,
-    //     y: centerPageY / 20,
-    //   });
-    console.log(cursorRect.left)
+      gsap.to(photoView, {
+        duration: 0.3,
+        x: centerPageX / 20,
+        y: centerPageY / 100,
+      });
     },
   },
 };

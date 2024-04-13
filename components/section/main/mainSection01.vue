@@ -30,7 +30,11 @@
     <bgBalls>
       <template v-slot:otherBalls>
         <div class="main__ball main__ball07 txt_h4">
-          <span>About US</span>
+          <span class="ani__ball-txt">
+            <i class="ani__ball-l"></i>
+            About US
+            <i class="ani__ball-r"></i>
+          </span>
         </div>
       </template>
     </bgBalls>
@@ -39,7 +43,7 @@
 
 <script>
 import bgBalls from "@/components/atom/bgBalls.vue";
-import textAnimation from "@/components/atom/textAnimation.vue";
+import textAnimation from "@/components/atom/textAnimation02.vue";
 
 export default {
   name: "mainSection01",
@@ -53,6 +57,22 @@ export default {
         `as, well, you are! `,
       ],
     };
+  },
+  methods: {
+    scrollAnimation() {
+      const gsap = this.$gsap;
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".box",
+          start: "center center",
+          end: "bottom top",
+          markers: true,
+          scrub: true,
+          pin: true,
+        },
+      })
+      
+    },
   },
 };
 </script>

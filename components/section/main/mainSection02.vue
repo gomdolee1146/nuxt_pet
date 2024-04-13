@@ -49,9 +49,10 @@
       <div class="main__icons">
         <button
           class="main__ico"
-          :class="{ on: showContent(idx), icons }"
+          :class="{ 'on': showContent(idx), icons }"
           v-for="(icons, idx) in mainService.mainIco"
           :key="idx"
+          @click="changeContent(idx)"
         ></button>
       </div>
     </div>
@@ -82,14 +83,10 @@ export default {
         mainThumb: thumb,
         mainIco: buttonClass,
       };
-      // return this.$store.state.mainSection.serviceList;
     },
   },
 
   mounted() {
-    // setInterval(() => {
-    //   this.getNumber()
-    // }, 10000)
   },
 
   methods: {
@@ -105,6 +102,9 @@ export default {
       if (this.indexNum === idx) return true;
       else return false;
     },
+    changeContent(idx){
+      this.indexNum = idx;
+    } 
   },
 };
 </script>

@@ -20,7 +20,7 @@
     height: 80px;
     border: 4px solid $point;
     border-radius: 50%;
-    background-color: $base;
+    background: $base url("@/assets/imgs/logo/logo_dog.png") no-repeat center / auto 100%;
   }
 
   &__desc {

@@ -58,3 +58,7 @@ $themes: (themePink, themeBlue);
     @include setTheme($theme);
   }
 }
+
+body {
+  background: $primary;
+}

@@ -4,7 +4,7 @@
       <a class="header__logo" @click="goToPage('/')"></a>
     </div>
     <div class="header__center">
-      <div class="header__nav_ico" v-if="isScroll && !isHeaderFull">
+      <div class="ico__menu" v-if="isScroll && !isHeaderFull">
         <span></span>
         <span></span>
         <span></span>
@@ -62,6 +62,9 @@ export default {
       return this.$store.state.menuList.navMenu;
     },
   },
+  mounted(){
+    const gsap = this.$gsap; 
+  }
 };
 </script>
 <style lang="scss" scoped>
