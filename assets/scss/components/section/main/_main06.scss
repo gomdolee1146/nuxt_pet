@@ -1,0 +1,12 @@
+@import "@/assets/scss/style.scss";
+
+.main {
+  padding-top: 10vh;
+
+  &__txt {
+    min-height: 12vh;
+    margin: 4vh 0;
+    color: $point;
+    text-align: center;
+  }
+}

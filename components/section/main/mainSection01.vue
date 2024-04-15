@@ -29,7 +29,7 @@
 
     <bgBalls>
       <template v-slot:otherBalls>
-        <div class="main__ball main__ball07 txt_h4">
+        <div class="main__ball main__ball07 txt_h4 ani__ball">
           <span class="ani__ball-txt">
             <i class="ani__ball-l"></i>
             About US

@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <div class="main__txt">found us here</div>
+    <div class="main__txt txt_h6">found us here</div>
     <photoView />
   </div>
 </template>
@@ -14,7 +14,5 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import "@/assets/scss/components/section/main/mainCommon.scss";
-.main {
-  padding-top: 12vh;
-}
+@import "@/assets/scss/components/section/main/main06.scss";
 </style>

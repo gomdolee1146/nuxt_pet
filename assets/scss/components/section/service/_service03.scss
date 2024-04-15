@@ -11,6 +11,7 @@
 
   &__card {
     flex: 1 1 25%;
+    position: relative;
     height: 100%;
     padding: 16px 20px;
     border-radius: 16px;
@@ -29,5 +30,16 @@
   &__desc,
   &__btn-booking {
     color: $point;
+  }
+
+  &__price {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__desc {
+    position: absolute;
+    bottom: 0;
+    left: 0;
   }
 }

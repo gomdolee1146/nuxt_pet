@@ -35,11 +35,11 @@ export default {
       const photoView = this.$refs.photoView;
 
       const cursorRect = cursor.getBoundingClientRect();
-      gsap.to(cursor, {
-        duration: 0.5,
-        left: e.pageX - cursorRect.width / 2,
-        top: e.pageY - cursorRect.height / 2,
-      });
+      // gsap.to(cursor, {
+      //   duration: 0.5,
+      //   left: e.pageX - cursorRect.width / 2,
+      //   top: e.pageY - cursorRect.height / 2,
+      // });
 
       let mousePageX = e.pageX;
       let mousePageY = e.pageY;

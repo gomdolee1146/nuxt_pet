@@ -179,7 +179,7 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background-color: $point;
+      background: icon-img('chevron-left', $svg-pink-point) no-repeat center / auto 100%;
       z-index: 10;
     }
 
@@ -188,6 +188,7 @@
     }
     &_navi-next {
       right: 3vw;
+      transform: scaleX(-1);
     }
   }
 }

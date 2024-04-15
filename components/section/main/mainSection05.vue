@@ -7,8 +7,17 @@
           <i class="ico__arrow-down"></i>
         </div>
         <h1 class="main__title txt_h1">HAVE QUESTION?</h1>
-        <h3 class="main__contact txt_h3"><p>contact us at</p> <span>858-449-2691.</span></h3>
-        <button class="main__btn-book">Book now</button>
+        <h3 class="main__contact txt_h3">
+          <p>contact us at</p>
+          <span>858-449-2691.</span>
+        </h3>
+        <button class="main__btn-book ani__ball">
+          <span class="ani__ball-txt">
+            <i class="ani__ball-l"></i>
+            Book now
+            <i class="ani__ball-r"></i>
+          </span>
+        </button>
       </div>
       <div class="main__content">
         <div class="main__content_title">

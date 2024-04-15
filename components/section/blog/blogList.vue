@@ -10,6 +10,7 @@
           v-for="(filterBtn, idx) in filterList"
           :key="idx"
           class="txt_h6"
+          @click="filterData(filterBtn)"
         >
           {{ filterBtn }}
         </button>
@@ -36,7 +37,9 @@
                 alt="blogThumbnail"
               />
             </div>
-            <div class="blog__content_title txt_h8">{{ blogContent.title }}</div>
+            <div class="blog__content_title txt_h8">
+              {{ blogContent.title }}
+            </div>
           </div>
         </nuxt-link>
       </li>
@@ -59,16 +62,16 @@ export default {
   },
   methods: {
     setNameList(num) {
-      const fileName = num + 1 
+      const fileName = num + 1;
       const result = String(fileName).padStart(2, "0");
       return result;
     },
     filterData(filter) {
       const result = this.blogData.filter((el) => {
-        el.tag.filter((elTag) => {
-          return elTag === filter;
-        });
+        return el.tag.findIndex(elTag => elTag === filter) > -1
+        // return el.tag.indexOf(filter);
       });
+      console.log(result);
       return result;
     },
   },

@@ -49,11 +49,13 @@
       <div class="main__icons">
         <button
           class="main__ico"
-          :class="{ 'on': showContent(idx), icons }"
           v-for="(icons, idx) in mainService.mainIco"
+          :class="{ 'on': showContent(idx) }"
           :key="idx"
           @click="changeContent(idx)"
-        ></button>
+        >
+          <i :class="icons"></i>
+        </button>
       </div>
     </div>
     <div class="main__circle"></div>

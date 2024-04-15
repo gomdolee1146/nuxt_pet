@@ -45,6 +45,7 @@
     box-sizing: border-box;
   }
   &__lst {
+    position: relative;
     padding: 16px 20px;
     box-sizing: border-box;
 
@@ -54,18 +55,18 @@
       &.ico__ball {
         position: absolute;
         top: 20%;
-        left: -10px;
+        left: 10px;
         &:nth-child(2),
         &:nth-of-type(2) {
           position: absolute;
           bottom: 20%;
-          right: -10px;
+          right: 10px;
         }
       }
       &.ico__bone-default {
         position: absolute;
         bottom: 20%;
-        right: -10px;
+        right: 10px;
       }
     }
   }

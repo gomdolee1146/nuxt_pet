@@ -34,8 +34,8 @@
     <div class="pricing__box">
       <div class="ico_box">
         <i class="ico__bone"></i>
-        <span class="txt_h9">More walks <br />more savings</span>
       </div>
+      <span class="txt_h9">More walks <br />more savings</span>
     </div>
 
     <div class="pricing__addition">

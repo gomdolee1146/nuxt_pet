@@ -41,6 +41,13 @@
       h4 {
         color: $base;
       }
+
+      &:hover i {
+        transition: transform 0.3s ease; 
+        transform: rotate(90deg) translateY(4px);
+        will-change: transform;
+      }
+
     }
   }
   &__txt {

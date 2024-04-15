@@ -41,7 +41,7 @@ export default {
         loop: true,
         autoplay: {
           delay: 3000,
-          pauseOnMouseEnter: true,
+          // pauseOnMouseEnter: true,
         },
         spaceBetween: 16,
         navigation: {

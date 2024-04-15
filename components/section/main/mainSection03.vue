@@ -23,7 +23,7 @@
     <div class="main__desc txt_h8">
       just fill out the form, <br /> and we'll be happy to assist you with your pet.
     </div>
-    <button class="main__btn-book">
+    <button class="main__btn-book ani__ball">
       <span class="ani__ball-txt">
           <i class="ani__ball-l"></i>
           TRY IT!

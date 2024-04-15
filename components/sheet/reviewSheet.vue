@@ -10,7 +10,7 @@
         </div>
         <div class="sheet__content">
           <div class="sheet__box">
-            <!-- <img :src="" /> -->
+            <img :src="require(`~/assets/imgs/dog_${reviewData.num}.png`)" />
           </div>
           <div class="sheet__box sheet__box-txt">
             <h6 class="txt_h7">{{ reviewData.date }}</h6>
