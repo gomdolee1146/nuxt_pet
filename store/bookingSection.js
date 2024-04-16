@@ -9,16 +9,17 @@ export const state = () => ({
         "Three times a week",
         "Four times a week",
       ],
+      placeholder: 'select option'
     },
     {
       step: 2,
       title: "Your Dog Name? :)",
-      placeholder: "",
+      placeholder: "enter name",
     },
     {
       step: 3,
       title: "How long does a pet need to walk?",
-      placeholder: "",
+      placeholder: "enter value",
     },
     {
       step: 4,
@@ -32,12 +33,14 @@ export const state = () => ({
     {
       step: 5,
       title: "We also need to know that...",
-      placeholder: "",
+      placeholder: "enter your message",
     },
     {
       step: 6,
       title: "Your name, your phone and your mail",
-      placeholder: "",
+      namePlaceholder: "your name",
+      phonePlaceholder: "your phone",
+      mailPlaceholder: "your mail",
     },
   ],
   userAnswerList: [

@@ -13,10 +13,12 @@
         <h4 class="booking__title txt_h5">
           {{ bookingQuestion[0].title }}
         </h4>
-        <select class="booking__select" v-model="optionGroup.option">
+        <select class="booking__select" v-model="optionGroup.option" required>
+          <option value="" disabled selected>{{ bookingQuestion[0].placeholder }}</option>
           <option
             v-for="(options, idx) in bookingQuestion[0].selectOption"
             :key="idx"
+            :value="idx"
           >
             {{ options }}
           </option>
@@ -29,6 +31,7 @@
         <input
           type="text"
           class="booking__input"
+          :placeholder="bookingQuestion[1].placeholder"
           v-model="optionGroup.dogName"
         />
       </div>
@@ -36,7 +39,12 @@
         <h4 class="booking__title txt_h5">
           {{ bookingQuestion[2].title }}
         </h4>
-        <input type="text" class="booking__input" v-model="optionGroup.time" />
+        <input
+          type="text"
+          class="booking__input"
+          :placeholder="bookingQuestion[2].placeholder"
+          v-model="optionGroup.time"
+        />
       </div>
       <div class="booking__box" v-if="this.step === 4">
         <h4 class="booking__title txt_h5">
@@ -76,16 +84,19 @@
           <input
             type="text"
             class="booking__input"
+            :placeholder="bookingQuestion[5].namePlaceholder"
             v-model="optionGroup.ownerName"
           />
           <input
             type="text"
             class="booking__input"
+            :placeholder="bookingQuestion[5].phonePlaceholder"
             v-model="optionGroup.ownerPhone"
           />
           <input
             type="text"
             class="booking__input"
+            :placeholder="bookingQuestion[5].mailPlaceholder"
             v-model="optionGroup.ownerMail"
           />
         </div>

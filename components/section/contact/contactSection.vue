@@ -117,7 +117,6 @@
             data-v-b9256d9e=""
           ></path>
           <ellipse
-            id="eye-wrap"
             cx="165.546"
             cy="325"
             rx="41.3794"
@@ -134,7 +133,6 @@
             data-v-b9256d9e=""
           ></ellipse>
           <circle
-            id="right-eye"
             cx="276"
             cy="294.258325"
             r="13"
@@ -142,7 +140,6 @@
             data-v-b9256d9e=""
           ></circle>
           <circle
-            id="left-eye"
             cx="192"
             cy="294.258325"
             r="13"
@@ -167,6 +164,36 @@
               <stop offset="1" stop-color="#F6F6ED" data-v-b9256d9e=""></stop>
             </linearGradient>
           </defs>
+        </svg>
+      </div>
+
+      <div class="contact__circle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 500 500"
+        >
+          <defs>
+            <path
+              d="M50,250c0-110.5,89.5-200,200-200s200,89.5,200,200s-89.5,200-200,200S50,360.5,50,250"
+              id="textcircle_bottom"
+            >
+              <animateTransform
+                attributeName="transform"
+                begin="0s"
+                dur="20s"
+                type="rotate"
+                from="195 250 250"
+                to="555 250 250"
+                repeatCount="indefinite"
+              />
+            </path>
+          </defs>
+          <text dy="70" textLength="810">
+            <textPath xlink:href="#textcircle_bottom">
+              book now!
+            </textPath>
+          </text>
         </svg>
       </div>
     </div>
@@ -215,7 +242,7 @@ export default {
     };
   },
   methods: {
-    async saveContactINfo() {
+    async saveContactInfo() {
       try {
         const contactInfo = {
           date: Date.now(),

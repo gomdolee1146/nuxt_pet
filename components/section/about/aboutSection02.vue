@@ -5,7 +5,7 @@
       <div class="about__title-l txt_h7">THE YOUR LOVE</div>
       <div class="about__title-r txt_h7">PETS DESERVES</div>
       <div class="about__center">
-        <div class="about__circle">
+        <div class="about__circle" ref="aboutCircle">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -47,6 +47,26 @@
 <script>
 export default {
   name: "aboutSection02",
+  methods: {
+    rotateCircle() {
+      const gsap = this.$gsap;
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: ".about__wrap",
+          pin: true,
+          scrub: 0.2,
+          start: "top top",
+          end: "+=10000",
+        },
+      })
+      .to (".about__circle", {
+        rotation: 360 * 5,
+        duration: 1,
+        ease: 'none'
+      })
+    },
+  },
+  mounted() {},
 };
 </script>
 

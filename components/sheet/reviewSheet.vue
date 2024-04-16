@@ -5,7 +5,9 @@
       <div class="sheet__wrap">
         <div class="sheet__header">
           <span class="txt_h9">{{ reviewData.name }}</span>
-          <button class="btn-cls" @click="toHideReviewSheet"></button>
+          <button class="btn-cls" @click="toHideReviewSheet">
+            <i class="ico-cls"></i>
+          </button>
           <span class="txt_h9">{{ `${reviewData.num} - 08` }}</span>
         </div>
         <div class="sheet__content">

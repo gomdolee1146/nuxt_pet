@@ -18,7 +18,7 @@
       <div class="main__txt_wrap">
         <div class="main__desc">
           <textAnimation
-            class="txt_h7"
+            class="txt_h6"
             :textContent="textList"
             v-for="(textList, idx) in textContent"
             :key="idx"
@@ -29,7 +29,7 @@
 
     <bgBalls>
       <template v-slot:otherBalls>
-        <div class="main__ball main__ball07 txt_h4 ani__ball">
+        <div class="main__ball main__ball07 txt_h7 ani__ball">
           <span class="ani__ball-txt">
             <i class="ani__ball-l"></i>
             About US

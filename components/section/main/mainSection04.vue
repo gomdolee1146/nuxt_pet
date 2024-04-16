@@ -2,9 +2,15 @@
   <div class="main">
     <div class="main__circle"></div>
     <div class="main__wrap">
-      <div class="main__desc txt_h5">
-        <span>the personalized in-home</span
-        ><span> care your pet deserves!</span>
+      <div class="main__desc">
+        <textAnimation
+          class="txt_h5"
+          :textContent="textList"
+          v-for="(textList, idx) in textContent"
+          :key="idx"
+        />
+        <!-- <span>the personalized in-home</span
+        ><span> care your pet deserves!</span> -->
       </div>
       <div class="ico_box">
         <i class="ico__arrow-down"></i>
@@ -48,20 +54,25 @@
         <div class="main__bg"></div>
       </div>
     </div>
-    <reviewSheet
-      v-if="isShow"
-      :reviewData="reviewData"
-      @hideReviewSheet="test"
-    />
+    <!-- <transition name="slide-up" v-show="isShow">
+      <reviewSheet
+        v-show="isShow"
+        :reviewData="reviewData"
+        @hideReviewSheet="test"
+      />
+    </transition> -->
   </div>
 </template>
 <script>
 import reviewSheet from "@/components/sheet/reviewSheet.vue";
+import textAnimation from "@/components/atom/textAnimation02.vue";
+
 export default {
-  components: { reviewSheet },
+  components: { reviewSheet, textAnimation },
   name: "mainSection04",
   data() {
     return {
+      textContent: [`the personalized in-home`, `care your pet deserves!`],
       isShow: false,
       reviewData: {},
 
@@ -92,10 +103,10 @@ export default {
       this.reviewData = this.reviewList[idx];
       document.body.style.overflow = "hidden";
     },
-    test(data){
+    test(data) {
       this.isShow = data;
       document.body.style.overflow = "";
-    }
+    },
   },
   computed: {
     reviewList() {

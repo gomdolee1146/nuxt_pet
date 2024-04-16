@@ -17,7 +17,7 @@
       </div>
     </div>
     <ul class="blog__list">
-      <li class="blog__lst" v-for="(blogContent, idx) in blogData" :key="idx">
+      <li class="blog__lst" v-for="(blogContent, idx) in blogList" :key="idx">
         <i class="ico__ball"></i>
         <i class="ico__ball" v-if="idx % 2 === 0"></i>
         <i class="ico__bone-default" v-else></i>
@@ -53,6 +53,7 @@ export default {
   data() {
     return {
       filterList: ["all", "dog care", "helpful tips", "trainings", "fastFacts"],
+      blogList: [],
     };
   },
   computed: {
@@ -67,13 +68,18 @@ export default {
       return result;
     },
     filterData(filter) {
-      const result = this.blogData.filter((el) => {
-        return el.tag.findIndex(elTag => elTag === filter) > -1
-        // return el.tag.indexOf(filter);
-      });
-      console.log(result);
-      return result;
+      if (filter !== "all") {
+        const result = this.blogData.filter((el) => {
+          return el.tag.findIndex((elTag) => elTag === filter) > -1;
+        });
+        this.blogList = result;
+      } else {
+        this.blogList = this.blogData;
+      }
     },
+  },
+  mounted() {
+    this.blogList = this.blogData;
   },
 };
 </script>

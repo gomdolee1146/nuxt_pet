@@ -1,11 +1,12 @@
 <template>
-  <div class="text-animation">
+  <div class="text_ani">
+    <span class="text_trigger"></span>
     <span
       v-for="(text, index) in textContent"
       :key="index"
-      class="item"
-      :style="{ animationDelay: index * 100 + 'ms' }"
+      class="text_ani__text"
       v-html="text"
+      ref="textContent"
     />
   </div>
 </template>
@@ -15,7 +16,6 @@ export default {
   name: "textAnimation02",
   props: {
     textContent: { type: String, default: "" },
-    isAniStart: { type: Boolean, default: false },
   },
   data() {
     return {};
@@ -23,20 +23,33 @@ export default {
   methods: {
     textScroll() {
       const gsap = this.$gsap;
+      const text = this.$refs.textContent;
 
-      gsap.from(".text-animation .item", {
-        y: "100%",
+      gsap.from(text, {
+        y: 30,
         opacity: 0,
-        duration: 0.5,
-        ease: "back.out",
+        duration: 0.1,
+        ease: "power1.out",
         stagger: 0.1,
 
         scrollTrigger: {
-          trigger: ".text-animation",
+          trigger: ".text_trigger",
           start: "top center",
         },
       });
     },
   },
+  mounted() {
+    this.textScroll();
+  },
 };
 </script>
+<style lang="scss" scoped>
+.text_ani {
+  position: relative;
+}
+.text_trigger {
+  position: absolute;
+  top: -200px;
+}
+</style>

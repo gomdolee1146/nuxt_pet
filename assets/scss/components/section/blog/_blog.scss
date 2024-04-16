@@ -49,7 +49,7 @@
     padding: 16px 20px;
     box-sizing: border-box;
 
-    i {
+    &:hover i {
       position: absolute;
 
       &.ico__ball {
