@@ -9,7 +9,7 @@ export const state = () => ({
         "Three times a week",
         "Four times a week",
       ],
-      placeholder: 'select option'
+      placeholder: "select option",
     },
     {
       step: 2,
@@ -58,15 +58,14 @@ export const state = () => ({
   ],
 });
 
-
 export const mutation = () => ({
-  SAVE_BOOKINFO(state, bookInfo){
-    state.userAnswerList.push(bookInfo)
-  }
-})  
+  SAVE_BOOKINFO(state, bookInfo) {
+    state.userAnswerList.push(bookInfo);
+  },
+});
 
 export const action = () => ({
-  saveBookingInfo({commit}, bookInfo){
-    commit('SAVE_BOOKINFO', bookInfo)
-  }
-})
+  saveBookingInfo({ commit }, bookInfo) {
+    commit("SAVE_BOOKINFO", bookInfo);
+  },
+});

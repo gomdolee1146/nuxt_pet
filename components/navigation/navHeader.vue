@@ -4,14 +4,18 @@
       <a class="header__logo" @click="goToPage('/')"></a>
     </div>
     <div class="header__center">
-      <div class="ico__menu" v-if="isScroll && !isHeaderFull">
+      <div
+        class="ico__menu"
+        v-if="isScroll && !isHeaderFull"
+        @click="toggleHeaderMenu"
+      >
         <span></span>
         <span></span>
         <span></span>
       </div>
 
       <template v-else>
-        <div class="header__nav_wrap" :class="{ isHeaderFull: 'on' }">
+        <div class="header__nav_wrap" :class="{ on: isHeaderFull }">
           <button
             class="header__nav_btn"
             v-for="(menu, idx) in navMenu"
@@ -23,9 +27,9 @@
           <template v-if="isHeaderFull">
             <div
               class="header__nav_circle"
-              v-for="circle in 5"
-              :key="circle"
-              :class="`header__nav_circle${circle}`"
+              v-for="(circle, idx) in 5"
+              :key="idx"
+              :class="`header__nav_circle${idx + 1}`"
             ></div>
           </template>
         </div>
@@ -58,7 +62,7 @@ export default {
     },
     headerScroll() {
       const gsap = this.$gsap;
-      const ScrollTrigger = this.$ScrollTrigger
+      const ScrollTrigger = this.$ScrollTrigger;
 
       const showAnim = gsap
         .from(".header", {
@@ -72,9 +76,18 @@ export default {
         start: "top top",
         end: "max",
         onUpdate: (self) => {
-          self.direction === -1 ? showAnim.play() : showAnim.reverse();
+          if (self.direction === -1) {
+            this.isScroll = true;
+            console.log(self.direction);
+            showAnim.play();
+          } else {
+            showAnim.reverse();
+          }
         },
       });
+    },
+    toggleHeaderMenu() {
+      this.isHeaderFull = !this.isHeaderFull;
     },
   },
   computed: {

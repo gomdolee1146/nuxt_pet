@@ -26,7 +26,6 @@ export default {
       const text = this.$refs.textContent;
 
       gsap.from(text, {
-        y: 30,
         opacity: 0,
         duration: 0.1,
         ease: "power1.out",
@@ -50,6 +49,6 @@ export default {
 }
 .text_trigger {
   position: absolute;
-  top: -200px;
+  top: -80px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about" ref="about">
     <div class="about__bg"></div>
     <div class="about__wrap">
       <div class="about__title-l txt_h7">THE YOUR LOVE</div>
@@ -50,23 +50,30 @@ export default {
   methods: {
     rotateCircle() {
       const gsap = this.$gsap;
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: ".about__wrap",
-          pin: true,
-          scrub: 0.2,
-          start: "top top",
-          end: "+=10000",
-        },
-      })
-      .to (".about__circle", {
-        rotation: 360 * 5,
-        duration: 1,
-        ease: 'none'
-      })
+      const wrap = this.$refs.about;
+      const circle = this.$refs.aboutCircle;
+
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: wrap,
+            pin: true,
+            markers: true,
+            scrub: 0.2,
+            start: "top top",
+            end: "+=10000",
+          },
+        })
+        .to(circle, {
+          rotation: 360 * 5,
+          duration: 1,
+          ease: "none",
+        });
     },
   },
-  mounted() {},
+  mounted() {
+    this.rotateCircle();
+  },
 };
 </script>
 

@@ -54,13 +54,11 @@
         <div class="main__bg"></div>
       </div>
     </div>
-    <!-- <transition name="slide-up" v-show="isShow">
       <reviewSheet
-        v-show="isShow"
+        v-if="isShow"
         :reviewData="reviewData"
         @hideReviewSheet="test"
       />
-    </transition> -->
   </div>
 </template>
 <script>
@@ -114,12 +112,12 @@ export default {
     },
   },
   mounted() {
-    this.$nextTick(() => {
-      const swiperTop = this.$refs.swiperTop.$swiper;
-      const swiperReview = this.$refs.swiperReview.$swiper;
-      swiperTop.controller.control = swiperReview;
-      swiperReview.controller.control = swiperTop;
-    });
+    // this.$nextTick(() => {
+    //   const swiperTop = this.$refs.swiperTop.swiper;
+    //   const swiperReview = this.$refs.swiperReview.swiper;
+    //   swiperTop.controller.control = swiperReview;
+    //   swiperReview.controller.control = swiperTop;
+    // });
   },
 };
 </script>

@@ -1,12 +1,15 @@
-.page-enter-active,
-.page-leave-active {
-  transition: all 0.5s;
+.layout-enter-active,
+.layout-leave-active {
+  transition: all 0.3s;
 }
-
-.page-enter,
-.page-leave-active {
+.layout-enter-from,
+.layout-enter {
   opacity: 0;
-  transform: scale(0);
+  transform: translate(50px, 0);
+}
+.layout-leave-to {
+  opacity: 0;
+  transform: translate(-50px, 0);
 }
 
 .slide-up-enter-active,
@@ -16,7 +19,6 @@
 .slide-up-leave-active {
   transform: translateY(0);
 }
-
 
 // text-animation
 @keyframes text-in {
@@ -77,11 +79,20 @@
   }
 }
 
+@keyframes slideUp {
+  0% {
+    transform: translate(-50%, 100%);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
 
 .card {
   transition: all 0.5s;
 }
-.card-enter, .card-leave-to {
+.card-enter,
+.card-leave-to {
   opacity: 0;
   transform: scaleY(0);
 }
@@ -94,5 +105,5 @@
 }
 .card-move {
   opacity: 1;
-  transition: all 0.5s 
+  transition: all 0.5s;
 }

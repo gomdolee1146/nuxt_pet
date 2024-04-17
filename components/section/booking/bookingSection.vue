@@ -170,11 +170,7 @@ export default {
         this.isActive = false;
       }
     },
-  },
-  computed: {
-    bookingQuestion() {
-      return this.$store.state.bookingSection.questionList;
-    },
+
     toggleButtonColor() {
       for (let i = 0; i < this.step; i++) {
         if (this.optionGroup[i] == "") this.isActive = false;
@@ -183,6 +179,14 @@ export default {
       // this.isActive = e.target.value === '' ? false : true
     },
   },
+  computed: {
+    bookingQuestion() {
+      return this.$store.state.bookingSection.questionList;
+    },
+  },
+  mounted(){
+    this.toggleButtonColor();
+  }
 };
 </script>
 

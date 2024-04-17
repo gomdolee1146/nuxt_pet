@@ -15,7 +15,9 @@
         class="main__card"
         v-for="(steps, idx) in aboutSteps"
         :key="idx"
-        ref="cardWrap"
+        ref="mainCard"
+        @mouseenter="flipEnter"
+        @mouseleave="flipLeave"
       >
         <div class="main__card-front" ref="cardFront"></div>
         <div class="main__card-back" ref="cardBack">
@@ -58,25 +60,27 @@ export default {
   components: { textAnimation },
   data() {
     return {
-     
       textContent: [
         `just fill out the form,`,
         `and we'll be happy to assist you with your pet.`,
       ],
+      
     };
   },
   computed: {
     aboutSteps() {
       return this.$store.state.aboutSection.aboutSteps;
     },
+    
   },
   methods: {
-    flipCards() {
+    timelineInfo(methods){
       const gsap = this.$gsap;
-      const cardWrap = this.$refs.cardWrap;
+      const mainCard = this.$refs.mainCard;
       const timeline = gsap.timeline({ paused: true })
 
-      gsap.utils.toArray(cardWrap).forEach((card) => {
+      gsap.utils.toArray(mainCard).forEach((card) => {
+        
         gsap.set(card, {
           transformStyle: "preserve-3d",
           transformPerspective: 1000,
@@ -93,18 +97,22 @@ export default {
           .to(back, { duration: 1, rotationY: 0 }, 0)
           .to(card, { z: 50 }, 0)
           .to(card, { z: 0 }, 0.5);
+        
+       
+        methods === 'play' ? timeline.play() : timeline.reverse();
       });
     },
-    // flipEnter() {
-    //   this.timeline.play();
-    // },
-    // flipLeave() {
-    //   this.timeline.reverse();
-    // },
+
+    flipEnter() {
+      this.timelineInfo('play')
+    },
+    flipLeave() {
+      this.timelineInfo('reverse')
+    },
   },
-  mounted() {
-    this.flipCards();
-  },
+  // mounted() {
+  //   this.flipCards();
+  // },
 };
 </script>
 
