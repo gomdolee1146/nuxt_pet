@@ -1,14 +1,4 @@
 @import "@/assets/scss/style.scss";
-.mouse__cursor {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 20px;
-  height: 20px;
-  pointer-events: none;
-}
-
 .photo_view {
   position: absolute;
   bottom: 0;

@@ -52,21 +52,38 @@
     &:hover i {
       position: absolute;
 
-      &.ico__ball {
-        position: absolute;
+      &:first-child {
         top: 20%;
         left: 10px;
-        &:nth-child(2),
-        &:nth-of-type(2) {
-          position: absolute;
-          bottom: 20%;
-          right: 10px;
-        }
       }
-      &.ico__bone-default {
-        position: absolute;
+      &:last-child {
         bottom: 20%;
         right: 10px;
+      }
+    }
+    &:first-child,
+    &:nth-child(3),
+    &:nth-child(6),
+    &:nth-child(8) {
+      i:first-child,
+      i:last-child {
+        background: icon-img("ball_yellow", "%23fff");
+      }
+    }
+    &:nth-child(2),
+    &:nth-child(7) {
+      i:first-child {
+        background: icon-img("ball_yellow", "%23fff");
+      }
+      i:last-child {
+        background: icon-img("bone_color", "%23fff");
+      }
+    }
+    &:nth-child(4),
+    &:nth-child(5) {
+      i:first-child,
+      i:last-child {
+        background: icon-img("bone_color", "%23fff");
       }
     }
   }

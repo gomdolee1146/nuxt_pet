@@ -14,6 +14,7 @@
 
 .slide-up-enter-active,
 .slide-up-leave-active {
+  transition: all 0.3s;
 }
 .slide-up-enter,
 .slide-up-leave-active {
@@ -107,3 +108,13 @@
   opacity: 1;
   transition: all 0.5s;
 }
+.content-up-enter,
+.content-up-leave-to {
+  transition: all 0.5s;
+}
+.content-up-enter,
+.content-up-leave-active {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+

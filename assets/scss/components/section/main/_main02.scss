@@ -28,6 +28,7 @@
       top: 5vh;
       left: 8vw;
       color: $point;
+      overflow: hidden;
     }
 
     &_thumb {
@@ -37,8 +38,16 @@
       position: absolute;
       width: 45vw;
       border-radius: 50%;
-      background-color: $primary;
       aspect-ratio: 1/1;
+      overflow: hidden;
+
+      &_box {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: $primary;
+      }
 
       img {
         display: block;

@@ -111,13 +111,13 @@ export default {
       return this.$store.state.mainSection.reviewList;
     },
   },
-  mounted() {
-    // this.$nextTick(() => {
-    //   const swiperTop = this.$refs.swiperTop.swiper;
-    //   const swiperReview = this.$refs.swiperReview.swiper;
-    //   swiperTop.controller.control = swiperReview;
-    //   swiperReview.controller.control = swiperTop;
-    // });
+  updated() {
+    this.$nextTick(() => {
+      const swiperTop = this.$refs.swiperTop.swiper;
+      const swiperReview = this.$refs.swiperReview.swiper;
+      swiperTop.controller.control = swiperReview;
+      swiperReview.controller.control = swiperTop;
+    });
   },
 };
 </script>

@@ -67,6 +67,11 @@
     font-weight: 500;
     color: $point;
     box-sizing: border-box;
+
+    &::placeholder {
+      color: $point;
+      opacity: 0.7;
+    }
   }
   &__textarea{
     height: 200px;

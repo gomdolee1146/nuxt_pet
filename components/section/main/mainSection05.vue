@@ -2,6 +2,13 @@
   <div class="themeBlue-theme">
     <div class="main">
       <div class="main__txt">
+        <div class="main__bg">
+          <div class="ico__ball" 
+            v-for="(ball, idx) in 6"
+            :class="`ico__ball${idx}`"
+            :key="idx"
+          ></div>
+        </div>
         <h5 class="main__desc txt_h5">book your consult</h5>
         <div class="ico_box">
           <i class="ico__arrow-down"></i>

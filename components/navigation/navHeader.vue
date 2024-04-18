@@ -78,7 +78,7 @@ export default {
         onUpdate: (self) => {
           if (self.direction === -1) {
             this.isScroll = true;
-            console.log(self.direction);
+            // console.log(self.direction);
             showAnim.play();
           } else {
             showAnim.reverse();

@@ -6,6 +6,7 @@
         class="main__num txt_h7"
         v-for="(steps, idx) in aboutSteps"
         :key="idx"
+        :class="activeIndex === idx ? 'on' : ''"
       >
         {{ steps.num }}
       </div>
@@ -16,11 +17,11 @@
         v-for="(steps, idx) in aboutSteps"
         :key="idx"
         ref="mainCard"
-        @mouseenter="flipEnter"
-        @mouseleave="flipLeave"
+        @mouseenter="flipEnter(idx)"
+        @mouseleave="flipLeave(idx)"
       >
-        <div class="main__card-front" ref="cardFront"></div>
-        <div class="main__card-back" ref="cardBack">
+        <div class="main__card-front"></div>
+        <div class="main__card-back">
           <div class="main__card_title txt_h4">{{ steps.title }}</div>
           <div class="main__card_num txt_h4">{{ steps.num }}.</div>
           <div class="main__card_desc txt_h9">{{ steps.desc }}</div>
@@ -64,7 +65,7 @@ export default {
         `just fill out the form,`,
         `and we'll be happy to assist you with your pet.`,
       ],
-      
+      activeIndex: '',
     };
   },
   computed: {
@@ -74,45 +75,41 @@ export default {
     
   },
   methods: {
-    timelineInfo(methods){
+    timelineInfo(methods, idx){
       const gsap = this.$gsap;
       const mainCard = this.$refs.mainCard;
       const timeline = gsap.timeline({ paused: true })
 
-      gsap.utils.toArray(mainCard).forEach((card) => {
-        
-        gsap.set(card, {
-          transformStyle: "preserve-3d",
-          transformPerspective: 1000,
-        });
+      const card = mainCard[idx]
 
-        const cards = gsap.utils.selector(card);
-        const front = cards(".main__card-front");
-        const back = cards(".main__card-back");
-
-        gsap.set(back, { rotationY: -180 });
-
-        timeline
-          .to(front, { duration: 1, rotationY: 180 })
-          .to(back, { duration: 1, rotationY: 0 }, 0)
-          .to(card, { z: 50 }, 0)
-          .to(card, { z: 0 }, 0.5);
-        
-       
-        methods === 'play' ? timeline.play() : timeline.reverse();
+      gsap.set(card, {
+        transformStyle: "preserve-3d",
+        transformPerspective: 1000,
       });
+
+      const cards = gsap.utils.selector(card);
+      const front = cards(".main__card-front");
+      const back = cards(".main__card-back");
+
+      gsap.set(back, { rotationY: -180 });
+
+      timeline
+        .to(front, { duration: 1, rotationY: 180 })
+        .to(back, { duration: 1, rotationY: 0 }, 0)
+        .to(card, { z: 50 }, 0)
+        .to(card, { z: 0 }, 0.5);
+      
+      methods === 'play' ? timeline.play() : timeline.reverse();
+      this.activeIndex = idx
     },
 
-    flipEnter() {
-      this.timelineInfo('play')
+    flipEnter(idx) {
+      this.timelineInfo('play', idx)
     },
-    flipLeave() {
-      this.timelineInfo('reverse')
+    flipLeave(idx) {
+      this.timelineInfo('reverse', idx)
     },
   },
-  // mounted() {
-  //   this.flipCards();
-  // },
 };
 </script>
 

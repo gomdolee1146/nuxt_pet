@@ -1,5 +1,4 @@
 @import "@/assets/scss/style.scss";
-
 .contact {
   width: 100%;
   min-height: 100vh;
@@ -32,9 +31,9 @@
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    background: $point icon-img('ball_yellow', '%23fff') no-repeat center / auto 24px;
+    background: $point icon-img("ball_yellow", "%23fff") no-repeat center / auto
+      24px;
     color: #ffe817;
-    animation: rotateAlways 3s linear infinite;
   }
 
   &__form_wrap {

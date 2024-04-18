@@ -10,19 +10,28 @@
         v-for="(num, idx) in mainService.mainNum"
         :key="idx"
       >
-        <template v-if="showContent(idx)">
-          {{ num }}
-        </template>
+        <transition name="content-up">
+          <template v-if="showContent(idx)">
+            {{ num }}
+          </template>
+        </transition>
       </div>
       <div
         class="main__list_thumb"
         v-for="(num, idx) in mainService.mainNum"
-        :key="idx"
+        :key="num"
       >
-        <img
-          :src="require(`~/assets/imgs/service/service_${num}.png`)"
-          ref="mainThumb"
-        />
+        <transition name="content-up">
+          <template v-if="showContent(idx)">
+            <div class="main__list_thumb_box">
+              <img
+                :src="require(`~/assets/imgs/service/service_${num}.png`)"
+                ref="mainThumb"
+              />
+            </div>
+          </template>
+        </transition>
+
         <button class="main__btn-book ani__ball">
           <span class="ani__ball-txt">
             <i class="ani__ball-l"></i>
@@ -31,27 +40,31 @@
           </span>
         </button>
       </div>
+
       <div class="main__list_box main__list-lb">
         <div class="main__progress">
           <div class="main__progress_bg"></div>
           <div class="main__progress_bar" style="width: 10%"></div>
         </div>
+
         <div
           class="main__list_title txt_h2"
           v-for="(title, idx) in mainService.mainTitle"
-          :key="idx"
+          :key="title"
         >
-          <template v-if="showContent(idx)">
-            {{ title }}
-          </template>
+          <transition name="content-up">
+            <template v-if="showContent(idx)">
+              {{ title }}
+            </template>
+          </transition>
         </div>
       </div>
       <div class="main__icons">
         <button
           class="main__ico"
           v-for="(icons, idx) in mainService.mainIco"
-          :class="{ 'on': showContent(idx) }"
-          :key="idx"
+          :class="{ on: showContent(idx) }"
+          :key="icons"
           @click="changeContent(idx)"
         >
           <i :class="icons"></i>
@@ -88,8 +101,7 @@ export default {
     },
   },
 
-  mounted() {
-  },
+  mounted() {},
 
   methods: {
     getNumber() {
@@ -104,9 +116,9 @@ export default {
       if (this.indexNum === idx) return true;
       else return false;
     },
-    changeContent(idx){
+    changeContent(idx) {
       this.indexNum = idx;
-    } 
+    },
   },
 };
 </script>

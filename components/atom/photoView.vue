@@ -1,6 +1,5 @@
 <template>
   <div class="photo_view" ref="photoView" @mousemove="viewMove">
-    <div class="mouse__cursor" ref="mouseCursor"></div>
     <div
       class="photo_view__list"
       :class="`photo_view__list${setNameList(num)}`"
@@ -31,15 +30,7 @@ export default {
     },
     viewMove(e) {
       const gsap = this.$gsap;
-      const cursor = this.$refs.mouseCursor;
       const photoView = this.$refs.photoView;
-
-      const cursorRect = cursor.getBoundingClientRect();
-      // gsap.to(cursor, {
-      //   duration: 0.5,
-      //   left: e.pageX - cursorRect.width / 2,
-      //   top: e.pageY - cursorRect.height / 2,
-      // });
 
       let mousePageX = e.pageX;
       let mousePageY = e.pageY;

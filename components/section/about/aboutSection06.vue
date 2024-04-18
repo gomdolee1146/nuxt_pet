@@ -25,16 +25,13 @@
         provided to your furry family member.
       </p>
     </div>
-    <photoView />
   </div>
 </template>
 
 <script>
-import photoView from "@/components/atom/photoView.vue";
 
 export default {
   name: "aboutSection06",
-  components: { photoView },
   methods: {
     goToBooking() {
       this.$router.push({

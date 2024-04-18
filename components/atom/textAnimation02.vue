@@ -1,6 +1,6 @@
 <template>
   <div class="text_ani">
-    <span class="text_trigger"></span>
+    <span class="text_trigger" ref="trigger"></span>
     <span
       v-for="(text, index) in textContent"
       :key="index"
@@ -24,6 +24,7 @@ export default {
     textScroll() {
       const gsap = this.$gsap;
       const text = this.$refs.textContent;
+      const trigger = this.$refs.trigger;
 
       gsap.from(text, {
         opacity: 0,
@@ -32,8 +33,8 @@ export default {
         stagger: 0.1,
 
         scrollTrigger: {
-          trigger: ".text_trigger",
-          start: "top center",
+          trigger: trigger,
+          start: "bottom center",
         },
       });
     },

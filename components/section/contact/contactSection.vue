@@ -1,5 +1,6 @@
 <template>
-  <div class="contact">
+  <div class="contact" @mousemove="moveEyes">
+    <div class="mouse__cursor" ref="mouseCursor"></div>
     <h2 class="contact__title txt_h1">
       get in touch
       <i class="ico__ball"></i>
@@ -137,6 +138,7 @@
             cy="294.258325"
             r="13"
             fill="#2D2D2D"
+            ref="rightEye"
             data-v-b9256d9e=""
           ></circle>
           <circle
@@ -144,6 +146,7 @@
             cy="294.258325"
             r="13"
             fill="#2D2D2D"
+            ref="leftEye"
             data-v-b9256d9e=""
           ></circle>
           <defs data-v-b9256d9e="">
@@ -190,9 +193,7 @@
             </path>
           </defs>
           <text dy="70" textLength="810">
-            <textPath xlink:href="#textcircle_bottom">
-              book now!
-            </textPath>
+            <textPath xlink:href="#textcircle_bottom">book now!</textPath>
           </text>
         </svg>
       </div>
@@ -258,6 +259,24 @@ export default {
       } catch (err) {
         console.log(err);
       }
+    },
+    moveEyes(e) {
+      const gsap = this.$gsap;
+      const leftEye = this.$refs.leftEye;
+      const rightEye = this.$refs.rightEye;
+      const depth = 10;
+
+      let moveX = (e.pageX - window.innerWidth / 2) / depth;
+      let moveY = (e.pageY - window.innerHeight / 2) / depth;
+
+      if (moveX > 16) moveX = 16;
+      else if (moveX < -40) moveX = -40;
+
+      console.log(moveX);
+      gsap.to([leftEye, rightEye], {
+        x: moveX,
+        y: moveY,
+      });
     },
   },
 };

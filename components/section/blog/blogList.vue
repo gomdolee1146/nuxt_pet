@@ -18,9 +18,8 @@
     </div>
     <ul class="blog__list">
       <li class="blog__lst" v-for="(blogContent, idx) in blogList" :key="idx">
-        <i class="ico__ball"></i>
-        <i class="ico__ball" v-if="idx % 2 === 0"></i>
-        <i class="ico__bone-default" v-else></i>
+        <i class="ico__deco"></i>
+        <i class="ico__deco"></i>
         <nuxt-link
           :to="{
             name: 'blog-detail',

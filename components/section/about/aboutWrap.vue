@@ -6,6 +6,7 @@
     <aboutSection04 />
     <aboutSection05 />
     <aboutSection06 />
+    <aboutSection07 />
   </section>
 </template>
 
@@ -16,6 +17,7 @@ import aboutSection03 from "@/components/section/about/aboutSection03.vue";
 import aboutSection04 from "@/components/section/about/aboutSection04.vue";
 import aboutSection05 from "@/components/section/about/aboutSection05.vue";
 import aboutSection06 from "@/components/section/about/aboutSection06.vue";
+import aboutSection07 from "@/components/section/about/aboutSection07.vue";
 
 export default {
   name: "aboutWrap",
@@ -26,6 +28,7 @@ export default {
     aboutSection04,
     aboutSection05,
     aboutSection06,
+    aboutSection07,
   },
 };
 </script>
